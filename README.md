@@ -8,7 +8,7 @@
 
 >This notebook will show you how to install and use Nbextensions, use lot of exciting markdown code, and walk you through creating and using Github Pages to host your own notebooks as html.
 
-[Stats Review Notebook](https://faithkane3.github.io/stats_review
+[Stats Review Notebook](https://faithkane3.github.io/stats_review)
 
 >This notebook covers Probability Distributions and Hypothesis Testing. I tried to make the concepts approachable and included lots of helpful examples and code snippets.
 
