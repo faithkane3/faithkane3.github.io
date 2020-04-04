@@ -4,7 +4,7 @@
 
 ## Pages
 
-[/notebook_tutorial1[(faithkane.github.io/notebook_tutorial)]
+[/notebook_tutorial1](faithkane.github.io/notebook_tutorial)
 
 >This notebook will show you how to install and use Nbextensions, use lot of exciting markdown code, and walk you through creating and using Github Pages to host your own notebooks as html.
 
