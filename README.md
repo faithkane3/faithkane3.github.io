@@ -4,7 +4,7 @@
 
 ## Pages
 
-[HTML Notebook Tutorial](https://faithkane.github.io/notebook_tutorial)
+[HTML Notebook Tutorial](faithkane3.github.io/notebook_tutorial)
 
 >This notebook will show you how to install and use Nbextensions, use lot of exciting markdown code, and walk you through creating and using Github Pages to host your own notebooks as html.
 
@@ -16,3 +16,4 @@
 
 >This notebook covers the Linear Regression data science pipeline in full, from start to finish. Again, I hope that the concepts are approachable, and I've included plenty of helpful code snippets for each stage of the pipeline.
 
+https://faithkane.github.io/notebook_tutorial
