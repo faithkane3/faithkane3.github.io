@@ -2,7 +2,7 @@
 
 # Welcome to Faith Kane's Github Page
 
-## This repo contains the notebooks that I am hosting to share with others. I hope you find them useful; I've enjoyed the process of learning through notebook creation so much!
+## This repo contains the notebooks that I am creating to share with others. I hope you find them useful. I've enjoyed the process of learning through notebook creation so much!
 
 ## Pages
 
