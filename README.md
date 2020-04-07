@@ -14,7 +14,7 @@
 
 >This notebook covers Probability Distributions and Hypothesis Testing. I tried to make the concepts approachable and included lots of helpful examples and code snippets.
 
-[Linear Regression Review Notebook](https://faithkane3.github.io/regression_review)
+[Linear Regression Review Notebook Part I](https://faithkane3.github.io/regression_review_part1)
 
->This notebook covers the Linear Regression data science pipeline in full, from start to finish. Again, I hope that the concepts are approachable, and I've included plenty of helpful code snippets for each stage of the pipeline.
+>This notebook covers the Linear Regression data science pipeline from Acquire through Explore. Again, I hope that the concepts are approachable, and I've included plenty of helpful code snippets for each stage of the pipeline.
 
