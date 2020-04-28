@@ -14071,9 +14071,9 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Preparation---Imputing-and-Encoding-Focus">Preparation - Imputing and Encoding Focus<a class="anchor-link" href="#Preparation---Imputing-and-Encoding-Focus">&#182;</a></h2><h3><strong><font color=red>What are Imputing and Encoding?</strong>&lt;/font&gt;</h3>
+<h2 id="Preparation---Imputing-and-Encoding-Focus">Preparation - Imputing and Encoding Focus<a class="anchor-link" href="#Preparation---Imputing-and-Encoding-Focus">&#182;</a></h2><h3><strong><font color=red>What are Imputing and Encoding?</font></strong></h3>
 <p>Imputation is the process of replacing missing data with substituted values. You might choose to impute the mean, median, or mode of a given column to fill any holes or cells with missing data. Maybe you want to do something a little more complex like use a linear regression model to predict the missing values that you will impute. Depending on the situation, you might just decide to drop rows or columns that have more than a certain percentage of missing values. Whatever you decide to do, you first need to inspect your dataset for Null values.</p>
-<h3><strong><font color=orange>So What Are They For?</strong>&lt;/font&gt;</h3>
+<h3><strong><font color=orange>So What Are They For?</font></strong></h3>
 <p><strong>What is Label Encoding</strong></p>
 <p>Encoding is when you convert a string to an integer representation making a categorical value useable in a ML model.</p>
 <p>Encoding with LabelEncoder() converts each unique value in the column you wish to encode into an integer representing the original value. <strong>This is useful when there is meaning to the order of your categorical values.</strong></p>
@@ -15847,14 +15847,14 @@ Categories (3, interval[float64]): [(0.419, 26.0] &lt; (26.0, 31.0] &lt; (31.0, 
 <hr>
 <blockquote><p><strong>Recall:</strong> The Recall score tells you how often your classifier is catching the positive cases in your dataset. It describes how good the model is at predicting the positive class when the actual outcome is positive. In other words, Recall tells you what percentage of the time your model is identifying the relevant cases in your dataset.</p>
 </blockquote>
-<p><font color=green>**The Higher the Recall Score == The better your Classifier is at catching the actual positive cases in your dataset.**</font></p>
-<p><font color=red>**The Lower the Recall Score == The more your Classifier is making Type II Errors / Misses / False Negatives.**</font></p>
+<p><strong><font color=green>The Higher the Recall Score == The better your Classifier is at catching the actual positive cases in your dataset.</font></strong></p>
+<p><strong><font color=red>The Lower the Recall Score == The more your Classifier is making Type II Errors / Misses / False Negatives.</font></strong></p>
 <p>(Total Number of Correct Positive Predictions / Total Number of Actual Positive Observations in Dataset) -&gt; (TP / TP + FN)</p>
 <hr>
 <blockquote><p><strong>Precision:</strong> The Precision score tells you how often your model was able to <strong>predict positives correctly.</strong> In other words, precision is the proportion of observations your model predicts to be relevant that were actually relevant and not false alarms or false positives.</p>
 </blockquote>
-<p><font color=green>**The Higher the Precision Score == The better your Classifier is at Predicting Positives Precisely in your dataset.**</font></p>
-<p><font color=red>**The lower the Precision Score == The more your Classifier predicted a lot of positives where there were none, False Positives / Type I Errors / False Alarms**</font></p>
+<p><strong><font color=green>The Higher the Precision Score == The better your Classifier is at Predicting Positives Precisely in your dataset.</font></strong></p>
+<p><strong><font color=red>The lower the Precision Score == The more your Classifier predicted a lot of positives where there were none, False Positives / Type I Errors / False Alarms</font></strong></p>
 <ul>
 <li>If your model's Precision score goes up, the cost is that your model's Recall score goes down. You have to decide which is more important in your situation.</li>
 </ul>
