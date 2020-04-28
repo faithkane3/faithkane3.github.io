@@ -15121,7 +15121,8 @@ dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Inspect percentages of overall population</strong></p>
+<blockquote><p><strong><font color=purple>Inspect percentages of overall population</font></strong></p>
+</blockquote>
 
 </div>
 </div>
@@ -15186,7 +15187,8 @@ dtype: float64</pre>
 <li>Adding <code>.plot.bar()</code> turns the index of your groupby into xlabels and the values into bar heights. <strong>This is such a useful code snippet to put in your back pocket!</strong></li>
 </ul>
 <p><code>train.groupby('survival').fare.mean().plot.bar()</code></p>
-<p><strong>Inspect percentages by group</strong></p>
+<blockquote><p><strong><font color=purple>Inspect percentages by group</font></strong></p>
+</blockquote>
 <p><code>normalize=False</code> shows raw value counts, not percentages</p>
 
 </div>
@@ -15290,7 +15292,8 @@ dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Using 2 Different Categories</strong></p>
+<blockquote><p><strong><font color=purple>Using 2 Different Categories</font></strong></p>
+</blockquote>
 
 </div>
 </div>
@@ -15594,6 +15597,7 @@ dtype: float64</pre>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># inspect survival rate of children and adults</span>
+
 <span class="n">train</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;age_bin&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">Survived</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </pre></div>
 
@@ -15631,6 +15635,7 @@ Name: Survived, dtype: float64</pre>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># for even intervals</span>
+
 <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">train</span><span class="o">.</span><span class="n">Age</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>      
 </pre></div>
 
@@ -15677,6 +15682,7 @@ Categories (3, interval[float64]): [(0.34, 26.947] &lt; (26.947, 53.473] &lt; (5
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># for even number of observations in each interval</span>
+
 <span class="n">pd</span><span class="o">.</span><span class="n">qcut</span><span class="p">(</span><span class="n">train</span><span class="o">.</span><span class="n">Age</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
