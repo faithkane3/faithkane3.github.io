@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>aquire_walkthrough</title>
+<title>acquire_walkthrough</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13730,11 +13730,9 @@ the results.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="alert alert-block alert-info">
+<blockquote><p><strong>There is no next page, so <code>data['payload']['next_page']</code> returns <code>None</code>. This can come in handy when we write our function later.</strong></p>
+</blockquote>
 
-<b>Note:</b> There is no next page, so `data['payload']['next_page']` returns `None`. This can come in handy when we write our function later.
-
-</div>
 </div>
 </div>
 </div>
@@ -14990,11 +14988,9 @@ memory usage: 171.2 KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Create-a-function-that-retrieves-German-Energy-data-and-reads/writes-csv">Create a function that retrieves German Energy data and reads/writes csv<a class="anchor-link" href="#Create-a-function-that-retrieves-German-Energy-data-and-reads/writes-csv">&#182;</a></h3><div class="alert alert-block alert-info">
+<h3 id="Create-a-function-that-retrieves-German-Energy-data-and-reads/writes-csv">Create a function that retrieves German Energy data and reads/writes csv<a class="anchor-link" href="#Create-a-function-that-retrieves-German-Energy-data-and-reads/writes-csv">&#182;</a></h3><blockquote><p><strong><code>pd.read_csv()</code> accepts the arguments <code>parse_dates</code> and <code>index_col</code>. Pass in <code>parse_dates=True</code> or <code>parse_dates=[date_col]</code>, so that your date column is read in as a DateTime object and <code>index_col='date'</code>, so that your date column is set to the index. You can then use <code>.sort_index()</code> to make sure your DataFrame is in time order. A DataTime Index is great for exploration and visualization!</strong></p>
+</blockquote>
 
-<b>Tip:</b> `pd.read_csv()` accepts the arguments `parse_dates` and `index_col`. Pass in `parse_dates=True` or `parse_dates=[date_col]`, so that your date column is read in as a DateTime object and `index_col='date'`, so that your date column is set to the index. You can then use `.sort_index()` to make sure your DataFrame is in time order. A DataTime Index is great for exploration and visualization!
-
-</div>
 </div>
 </div>
 </div>
