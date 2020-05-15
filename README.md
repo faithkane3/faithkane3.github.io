@@ -29,3 +29,7 @@
 - [Time Series Acquire Exercise Walkthrough](https://faithkane3.github.io/acquire_walkthrough)
 
 >For a quick, pretty view of the exercises.
+
+- [Time Series Prepare Exercise Walkthrough](https://faithkane3.github.io/prepare_walkthrough)
+
+>For a quick, pretty view of the exercises.
