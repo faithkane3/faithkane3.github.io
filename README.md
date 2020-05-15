@@ -30,6 +30,6 @@
 
 >For a quick, pretty view of the exercises.
 
-- [Time Series Prepare Exercise Walkthrough](https://faithkane3.github.io/prepare_walkthrough)
+- [Time Series Prepare Exercise Walkthrough](https://faithkane3.github.io/time_series_prepare/prepare_walkthrough)
 
 >For a quick, pretty view of the exercises.
