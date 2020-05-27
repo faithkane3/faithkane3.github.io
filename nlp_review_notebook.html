@@ -13340,12 +13340,12 @@ Name: content, Length: 99, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Again, this is a look because it has not been reassigned or changed in place.</span>
 
-<span class="n">df</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[^A-z0-9&#39;\s]&quot;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^\w\s]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13358,21 +13358,21 @@ Name: content, Length: 99, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[11]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>0     US biotech company Novavax said it has started...
-1     India&#39;s economy is estimated to have grown at ...
+1     Indias economy is estimated to have grown at 1...
 2     TVS Motor Company has said it is cutting the s...
 3     Mahindra Group Chairman Anand Mahindra said th...
 4     Uber is firing 600 employees in India or 25 of...
                             ...                        
 94    Esha Gupta has revealed that she was a part of...
-95    Mithun Chakraborty&#39;s son and actor Namashi Cha...
-96    Web series &#39;Riverdale&#39; actors Cole Sprouse and...
+95    Mithun Chakrabortys son and actor Namashi Chak...
+96    Web series Riverdale actors Cole Sprouse and L...
 97    Karan Johar on Tuesday took to Instagram to th...
 98    Stating that the loss caused by Cyclone Amphan...
 Name: content, Length: 99, dtype: object</pre>
@@ -13386,13 +13386,13 @@ Name: content, Length: 99, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Now, I can chain these together and assign to my df as a new columm, &#39;basic_clean&#39;</span>
 
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;basic_clean&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>\
-                    <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[^A-z0-9&#39;\s]&quot;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>\
+                    <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^\w\s]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>\
                     <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="s1">&#39;NFKC&#39;</span><span class="p">)</span>\
                     <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="s1">&#39;ignore&#39;</span><span class="p">)</span>\
                     <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
@@ -13405,7 +13405,7 @@ Name: content, Length: 99, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -13421,7 +13421,7 @@ Name: content, Length: 99, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -13466,7 +13466,7 @@ Name: content, Length: 99, dtype: object</pre>
       <td>India's economic growth seen at 1.2% in Q4 FY2...</td>
       <td>Dharna</td>
       <td>India's economy is estimated to have grown at ...</td>
-      <td>india's economy is estimated to have grown at ...</td>
+      <td>indias economy is estimated to have grown at 1...</td>
     </tr>
     <tr>
       <th>2</th>
@@ -13512,7 +13512,7 @@ Name: content, Length: 99, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">basic_clean</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span>
@@ -13522,7 +13522,7 @@ Name: content, Length: 99, dtype: object</pre>
 <span class="sd">    passed column text normalized.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">df</span><span class="p">[</span><span class="s1">&#39;basic_clean&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>\
-                    <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[^A-z0-9&#39;\s]&quot;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>\
+                    <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^\w\s]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>\
                     <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="s1">&#39;NFKC&#39;</span><span class="p">)</span>\
                     <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="s1">&#39;ignore&#39;</span><span class="p">)</span>\
                     <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
@@ -13536,7 +13536,7 @@ Name: content, Length: 99, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">basic_clean</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;content&#39;</span><span class="p">)</span>
@@ -13553,7 +13553,7 @@ Name: content, Length: 99, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -13598,7 +13598,7 @@ Name: content, Length: 99, dtype: object</pre>
       <td>India's economic growth seen at 1.2% in Q4 FY2...</td>
       <td>Dharna</td>
       <td>India's economy is estimated to have grown at ...</td>
-      <td>india's economy is estimated to have grown at ...</td>
+      <td>indias economy is estimated to have grown at 1...</td>
     </tr>
   </tbody>
 </table>
@@ -13624,7 +13624,7 @@ Name: content, Length: 99, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;Knowledge is the compound interest of curiosity. - James Clear&#39;</span>
@@ -13637,7 +13637,7 @@ Name: content, Length: 99, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
@@ -13653,7 +13653,7 @@ Name: content, Length: 99, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[26]:</div>
 
 
 
@@ -13679,7 +13679,7 @@ Name: content, Length: 99, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;There&#39;s the kind of person who is always the victim in any story they tell. Always on the receiving end of some injustice. There&#39;s the kind of person who is always the kind of hero of every story they tell. There&#39;s the smart person; they delivered the clever put down there.&quot;</span>
@@ -13692,7 +13692,7 @@ Name: content, Length: 99, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
@@ -13708,7 +13708,7 @@ Name: content, Length: 99, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -13737,7 +13737,7 @@ Name: content, Length: 99, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Split your text using a regex pattern in .findall()</span>
@@ -13759,7 +13759,7 @@ Name: content, Length: 99, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -13784,7 +13784,7 @@ Name: content, Length: 99, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Use `.compile()` with .split(text) to split your text on more than one delimiter</span>
@@ -13805,7 +13805,7 @@ Name: content, Length: 99, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[15]:</div>
+    <div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -13839,7 +13839,7 @@ Name: content, Length: 99, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tokenizer</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">tokenize</span><span class="o">.</span><span class="n">ToktokTokenizer</span><span class="p">()</span>
@@ -13852,636 +13852,10 @@ Name: content, Length: 99, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">basic_clean</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">)[:</span><span class="mi">2</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[17]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0    [us, biotech, company, novavax, said, it, has,...
-1    [india, &#39;, s, economy, is, estimated, to, have...
-Name: basic_clean, dtype: object</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Here we apply nltk&#39;s tokenizer to each row, or text, in our basic_clean Series</span>
-
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;clean_tokes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">basic_clean</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;basic_clean&#39;</span><span class="p">,</span> <span class="s1">&#39;clean_tokes&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[19]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>basic_clean</th>
-      <th>clean_tokes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>us biotech company novavax said it has started...</td>
-      <td>[us, biotech, company, novavax, said, it, has,...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>india's economy is estimated to have grown at ...</td>
-      <td>[india, ', s, economy, is, estimated, to, have...</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong><font color=green>Now What?</font></strong></p>
-<h5 id="Tokenize-Function">Tokenize Function<a class="anchor-link" href="#Tokenize-Function">&#182;</a></h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">tokenize</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    This function takes in a df and a string for a column and</span>
-<span class="sd">    returns a df with a new column named &#39;clean_tokes&#39; with the</span>
-<span class="sd">    passed column text tokenized and in a list.</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">tokenizer</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">tokenize</span><span class="o">.</span><span class="n">ToktokTokenizer</span><span class="p">()</span>
-    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;clean_tokes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">df</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">tokenize</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;basic_clean&#39;</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[[</span><span class="s1">&#39;basic_clean&#39;</span><span class="p">,</span> <span class="s1">&#39;clean_tokes&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[21]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>basic_clean</th>
-      <th>clean_tokes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>us biotech company novavax said it has started...</td>
-      <td>[us, biotech, company, novavax, said, it, has,...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>india's economy is estimated to have grown at ...</td>
-      <td>[india, ', s, economy, is, estimated, to, have...</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4><strong><font color=orange>So What?</font></strong></h4>
-<h4 id="Stemming">Stemming<a class="anchor-link" href="#Stemming">&#182;</a></h4><p><strong>Stemming</strong> - is when you reduce related words in your text to their common stem. It can make it easier when you are searching for a particular word in your text to search for their common stem rather than every form of the word. Stemmers aren't that sophisticated in the way they chop off word endings at their common stems; Spacy, another python NLP library, doesn't even include a stemmer in their library. Spacy only offers the more sophisticated lemmatizer, which we will look at in NLTK next.</p>
-<h4><strong><font color=green>Now What?</font></strong></h4>
-<h5 id="Using-NLTK-PorterStemmer">Using NLTK PorterStemmer<a class="anchor-link" href="#Using-NLTK-PorterStemmer">&#182;</a></h5><div class="highlight"><pre><span></span><span class="n">ps</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">porter</span><span class="o">.</span><span class="n">PorterStemmer</span><span class="p">()</span>
-</pre></div>
-<div class="highlight"><pre><span></span><span class="n">stems</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">tokenized_col</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="p">[</span><span class="n">ps</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">row</span><span class="p">])</span>
-</pre></div>
-<div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;stemmed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stems</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create porter stemmer</span>
-
-<span class="n">ps</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">porter</span><span class="o">.</span><span class="n">PorterStemmer</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Stem each token from our clean_tokes Series of lists</span>
-
-<span class="n">stems</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">clean_tokes</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="p">[</span><span class="n">ps</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">row</span><span class="p">])</span>
-<span class="n">stems</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[23]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0    [us, biotech, compani, novavax, said, it, ha, ...
-1    [india, &#39;, s, economi, is, estim, to, have, gr...
-Name: clean_tokes, dtype: object</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Join our cleaned, stemmed lists of words back into sentences</span>
-
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;stemmed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stems</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We can do a quick visual check that our stemmer is working.</span>
-
-<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_colwidth</span> <span class="o">=</span> <span class="mi">300</span>
-<span class="n">df</span><span class="p">[[</span><span class="s1">&#39;basic_clean&#39;</span><span class="p">,</span> <span class="s1">&#39;stemmed&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[25]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>basic_clean</th>
-      <th>stemmed</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavax's valuation has surged by over 1000 this year to about 27 billion despite having no products on the market the trial is being supported by 388 mil...</td>
-      <td>us biotech compani novavax said it ha start phase 1 clinic trial of it experiment coronaviru vaccin and ha enrol 130 volunt novavax ' s valuat ha surg by over 1000 thi year to about 27 billion despit have no product on the market the trial is be support by 388 million in fund from the coalit for...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>india's economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi's ecowrap report it said the economic activity in the last seven days of march was completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the a...</td>
-      <td>india ' s economi is estim to have grown at 12 for the quarter end march 2020 said the sbi ' s ecowrap report it said the econom activ in the last seven day of march wa complet suspend due to lockdown caus an estim loss of around 14 lakh crore subsequ it project the annual gdp growth for 201920 ...</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong><font color=green>Now What?</font></strong></p>
-<h5 id="Stem-Function">Stem Function<a class="anchor-link" href="#Stem-Function">&#182;</a></h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">stem</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    This function takes in a df and a string for a column name and</span>
-<span class="sd">    returns a df with a new column named &#39;stemmed&#39;.</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="c1"># Create porter stemmer</span>
-    <span class="n">ps</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">porter</span><span class="o">.</span><span class="n">PorterStemmer</span><span class="p">()</span>
-    
-    <span class="c1"># Stem each token from our clean_tokes Series of lists</span>
-    <span class="n">stems</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="p">[</span><span class="n">ps</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">row</span><span class="p">])</span>
-    
-    <span class="c1"># Join our cleaned, stemmed lists of words back into sentences</span>
-    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;stemmed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stems</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-    
-    <span class="k">return</span> <span class="n">df</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">stem</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;clean_tokes&#39;</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[[</span><span class="s1">&#39;basic_clean&#39;</span><span class="p">,</span> <span class="s1">&#39;stemmed&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[27]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>basic_clean</th>
-      <th>stemmed</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>97</th>
-      <td>karan johar on tuesday took to instagram to thank fashion designer manish malhotra for sending him the best birthday present which was over an hourlong video of messages from johar's close friends and family i was overwhelmedwatching itit made my daymy year and many years ahead as well he wrote ...</td>
-      <td>karan johar on tuesday took to instagram to thank fashion design manish malhotra for send him the best birthday present which wa over an hourlong video of messag from johar ' s close friend and famili i wa overwhelmedwatch itit made my daymi year and mani year ahead as well he wrote karan ad tha...</td>
-    </tr>
-    <tr>
-      <th>98</th>
-      <td>stating that the loss caused by cyclone amphan is heartbreaking bhumi pednekar said it is high time that humanity understands what we have put our planet through in front of nature's wrath we all are one i really hope humanity wakes up she further said bhumi shared she is very passionate about n...</td>
-      <td>state that the loss caus by cyclon amphan is heartbreak bhumi pednekar said it is high time that human understand what we have put our planet through in front of natur ' s wrath we all are one i realli hope human wake up she further said bhumi share she is veri passion about natur conserv ad it ...</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4><strong><font color=orange>So What?</font></strong></h4>
-<h4 id="Lemmatization">Lemmatization<a class="anchor-link" href="#Lemmatization">&#182;</a></h4><p><strong>Lemmatization</strong> - is when you reduce related words in your text to their lemma or word base by applying a morphological analysis to your text. Like stemming, this is done to reduce the number of forms you have of the same word, so they can be analyzed as a single item. However, with stemming, you might end up with tokens that are not actually words anymore after they have been chopped off at their base, but with lemmatization you will end up with real words. A drawback of lemmatization is that it takes longer than stemming; you can try both to see which gives you better results as you analyze a given text.</p>
-<h4><strong><font color=green>Now What?</font></strong></h4>
-<h5 id="Using-NLTK-WordNetLemmatizer">Using NLTK WordNetLemmatizer<a class="anchor-link" href="#Using-NLTK-WordNetLemmatizer">&#182;</a></h5><div class="highlight"><pre><span></span><span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;wordnet&#39;</span><span class="p">)</span>
-</pre></div>
-<div class="highlight"><pre><span></span><span class="n">wnl</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">stem</span><span class="o">.</span><span class="n">WordNetLemmatizer</span><span class="p">()</span>
-</pre></div>
-<div class="highlight"><pre><span></span><span class="n">lemmas</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">tokenized_col</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="p">[</span><span class="n">wnl</span><span class="o">.</span><span class="n">lemmatize</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">row</span><span class="p">])</span>
-</pre></div>
-<div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;lemmatized&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lemmas</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create the Lemmatizer</span>
-
-<span class="n">wnl</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">stem</span><span class="o">.</span><span class="n">WordNetLemmatizer</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Lemmatize each token from our clean_tokes Series of lists</span>
-
-<span class="n">lemmas</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">clean_tokes</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="p">[</span><span class="n">wnl</span><span class="o">.</span><span class="n">lemmatize</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">row</span><span class="p">])</span>
-<span class="n">lemmas</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[29]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0    [u, biotech, company, novavax, said, it, ha, started, phase, 1, clinical, trial, of, it, experimental, coronavirus, vaccine, and, ha, enrolled, 130, volunteer, novavax, &#39;, s, valuation, ha, surged, by, over, 1000, this, year, to, about, 27, billion, despite, having, no, product, on, the, market,...
-1    [india, &#39;, s, economy, is, estimated, to, have, grown, at, 12, for, the, quarter, ended, march, 2020, said, the, sbi, &#39;, s, ecowrap, report, it, said, the, economic, activity, in, the, last, seven, day, of, march, wa, completely, suspended, due, to, lockdown, causing, an, estimated, loss, of, ar...
-Name: clean_tokes, dtype: object</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Join our cleaned, lemmatized lists of words back into sentences</span>
-
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;lemmatized&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lemmas</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;basic_clean&#39;</span><span class="p">,</span> <span class="s1">&#39;lemmatized&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[31]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>basic_clean</th>
-      <th>lemmatized</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavax's valuation has surged by over 1000 this year to about 27 billion despite having no products on the market the trial is being supported by 388 mil...</td>
-      <td>u biotech company novavax said it ha started phase 1 clinical trial of it experimental coronavirus vaccine and ha enrolled 130 volunteer novavax ' s valuation ha surged by over 1000 this year to about 27 billion despite having no product on the market the trial is being supported by 388 million ...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>india's economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi's ecowrap report it said the economic activity in the last seven days of march was completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the a...</td>
-      <td>india ' s economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi ' s ecowrap report it said the economic activity in the last seven day of march wa completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the...</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Just a quick sanity check that these are actually changing something...</span>
-
-<span class="n">df</span><span class="o">.</span><span class="n">stemmed</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">98</span><span class="p">]</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">lemmatized</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">98</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">basic_clean</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">)[:</span><span class="mi">2</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -14500,7 +13874,9 @@ Name: clean_tokes, dtype: object</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
+<pre>0    [us, biotech, company, novavax, said, it, has,...
+1    [indias, economy, is, estimated, to, have, gro...
+Name: basic_clean, dtype: object</pre>
 </div>
 
 </div>
@@ -14508,34 +13884,15 @@ Name: clean_tokes, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong><font color=green>Now What?</font></strong></p>
-<h5 id="Lemmatize-Function">Lemmatize Function<a class="anchor-link" href="#Lemmatize-Function">&#182;</a></h5>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">lemmatize</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    This function takes in a df and a string for column name and</span>
-<span class="sd">    returns the original df with a new column called &#39;lemmatized&#39;.</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="c1"># Create the lemmatizer</span>
-    <span class="n">wnl</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">stem</span><span class="o">.</span><span class="n">WordNetLemmatizer</span><span class="p">()</span>
-    
-    <span class="c1"># Lemmatize each token from our clean_tokes Series of lists</span>
-    <span class="n">lemmas</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="p">[</span><span class="n">wnl</span><span class="o">.</span><span class="n">lemmatize</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">row</span><span class="p">])</span>
-    
-    <span class="c1"># Join the cleaned and lemmatized tokens back into sentences</span>
-    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;lemmatized&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lemmas</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">df</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Here we apply nltk&#39;s tokenizer to each row, or text, in our basic_clean Series</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;clean_tokes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">basic_clean</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14548,8 +13905,7 @@ Name: clean_tokes, dtype: object</pre>
 <div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">lemmatize</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;clean_tokes&#39;</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[[</span><span class="s1">&#39;basic_clean&#39;</span><span class="p">,</span> <span class="s1">&#39;lemmatized&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;basic_clean&#39;</span><span class="p">,</span> <span class="s1">&#39;clean_tokes&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14586,19 +13942,663 @@ Name: clean_tokes, dtype: object</pre>
     <tr style="text-align: right;">
       <th></th>
       <th>basic_clean</th>
+      <th>clean_tokes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>us biotech company novavax said it has started...</td>
+      <td>[us, biotech, company, novavax, said, it, has,...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>indias economy is estimated to have grown at 1...</td>
+      <td>[indias, economy, is, estimated, to, have, gro...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><font color=green>Now What?</font></strong></p>
+<h5 id="Tokenize-Function">Tokenize Function<a class="anchor-link" href="#Tokenize-Function">&#182;</a></h5>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">tokenize</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This function takes in a df and a string for a column and</span>
+<span class="sd">    returns a df with a new column named &#39;clean_tokes&#39; with the</span>
+<span class="sd">    passed column text tokenized and in a list.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">tokenizer</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">tokenize</span><span class="o">.</span><span class="n">ToktokTokenizer</span><span class="p">()</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;clean_tokes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">tokenize</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;basic_clean&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[[</span><span class="s1">&#39;basic_clean&#39;</span><span class="p">,</span> <span class="s1">&#39;clean_tokes&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[36]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>basic_clean</th>
+      <th>clean_tokes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>us biotech company novavax said it has started...</td>
+      <td>[us, biotech, company, novavax, said, it, has,...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>indias economy is estimated to have grown at 1...</td>
+      <td>[indias, economy, is, estimated, to, have, gro...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4><strong><font color=orange>So What?</font></strong></h4>
+<h4 id="Stemming">Stemming<a class="anchor-link" href="#Stemming">&#182;</a></h4><p><strong>Stemming</strong> - is when you reduce related words in your text to their common stem. It can make it easier when you are searching for a particular word in your text to search for their common stem rather than every form of the word. Stemmers aren't that sophisticated in the way they chop off word endings at their common stems; Spacy, another python NLP library, doesn't even include a stemmer in their library. Spacy only offers the more sophisticated lemmatizer, which we will look at in NLTK next.</p>
+<h4><strong><font color=green>Now What?</font></strong></h4>
+<h5 id="Using-NLTK-PorterStemmer">Using NLTK PorterStemmer<a class="anchor-link" href="#Using-NLTK-PorterStemmer">&#182;</a></h5><div class="highlight"><pre><span></span><span class="n">ps</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">porter</span><span class="o">.</span><span class="n">PorterStemmer</span><span class="p">()</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="n">stems</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">tokenized_col</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="p">[</span><span class="n">ps</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">row</span><span class="p">])</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;stemmed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stems</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create porter stemmer</span>
+
+<span class="n">ps</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">porter</span><span class="o">.</span><span class="n">PorterStemmer</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Stem each token from our clean_tokes Series of lists</span>
+
+<span class="n">stems</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">clean_tokes</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="p">[</span><span class="n">ps</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">row</span><span class="p">])</span>
+<span class="n">stems</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[38]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    [us, biotech, compani, novavax, said, it, ha, ...
+1    [india, economi, is, estim, to, have, grown, a...
+Name: clean_tokes, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Join our cleaned, stemmed lists of words back into sentences</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;stemmed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stems</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We can do a quick visual check that our stemmer is working.</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_colwidth</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">df</span><span class="p">[[</span><span class="s1">&#39;basic_clean&#39;</span><span class="p">,</span> <span class="s1">&#39;stemmed&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[40]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>basic_clean</th>
+      <th>stemmed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavaxs valuation has surged by over 1000 this year to about 27 billion despite having no products on the market the trial is being supported by 388 mill...</td>
+      <td>us biotech compani novavax said it ha start phase 1 clinic trial of it experiment coronaviru vaccin and ha enrol 130 volunt novavax valuat ha surg by over 1000 thi year to about 27 billion despit have no product on the market the trial is be support by 388 million in fund from the coalit for epi...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>indias economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbis ecowrap report it said the economic activity in the last seven days of march was completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the ann...</td>
+      <td>india economi is estim to have grown at 12 for the quarter end march 2020 said the sbi ecowrap report it said the econom activ in the last seven day of march wa complet suspend due to lockdown caus an estim loss of around 14 lakh crore subsequ it project the annual gdp growth for 201920 to be ar...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><font color=green>Now What?</font></strong></p>
+<h5 id="Stem-Function">Stem Function<a class="anchor-link" href="#Stem-Function">&#182;</a></h5>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">stem</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This function takes in a df and a string for a column name and</span>
+<span class="sd">    returns a df with a new column named &#39;stemmed&#39;.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c1"># Create porter stemmer</span>
+    <span class="n">ps</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">porter</span><span class="o">.</span><span class="n">PorterStemmer</span><span class="p">()</span>
+    
+    <span class="c1"># Stem each token from our clean_tokes Series of lists</span>
+    <span class="n">stems</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="p">[</span><span class="n">ps</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">row</span><span class="p">])</span>
+    
+    <span class="c1"># Join our cleaned, stemmed lists of words back into sentences</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;stemmed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stems</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">stem</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;clean_tokes&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[[</span><span class="s1">&#39;basic_clean&#39;</span><span class="p">,</span> <span class="s1">&#39;stemmed&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[42]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>basic_clean</th>
+      <th>stemmed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>97</th>
+      <td>karan johar on tuesday took to instagram to thank fashion designer manish malhotra for sending him the best birthday present which was over an hourlong video of messages from johars close friends and family i was overwhelmedwatching itit made my daymy year and many years ahead as well he wrote k...</td>
+      <td>karan johar on tuesday took to instagram to thank fashion design manish malhotra for send him the best birthday present which wa over an hourlong video of messag from johar close friend and famili i wa overwhelmedwatch itit made my daymi year and mani year ahead as well he wrote karan ad that he...</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>stating that the loss caused by cyclone amphan is heartbreaking bhumi pednekar said it is high time that humanity understands what we have put our planet through in front of natures wrath we all are one i really hope humanity wakes up she further said bhumi shared she is very passionate about na...</td>
+      <td>state that the loss caus by cyclon amphan is heartbreak bhumi pednekar said it is high time that human understand what we have put our planet through in front of natur wrath we all are one i realli hope human wake up she further said bhumi share she is veri passion about natur conserv ad it give...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4><strong><font color=orange>So What?</font></strong></h4>
+<h4 id="Lemmatization">Lemmatization<a class="anchor-link" href="#Lemmatization">&#182;</a></h4><p><strong>Lemmatization</strong> - is when you reduce related words in your text to their lemma or word base by applying a morphological analysis to your text. Like stemming, this is done to reduce the number of forms you have of the same word, so they can be analyzed as a single item. However, with stemming, you might end up with tokens that are not actually words anymore after they have been chopped off at their base, but with lemmatization you will end up with real words. A drawback of lemmatization is that it takes longer than stemming; you can try both to see which gives you better results as you analyze a given text.</p>
+<h4><strong><font color=green>Now What?</font></strong></h4>
+<h5 id="Using-NLTK-WordNetLemmatizer">Using NLTK WordNetLemmatizer<a class="anchor-link" href="#Using-NLTK-WordNetLemmatizer">&#182;</a></h5><div class="highlight"><pre><span></span><span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;wordnet&#39;</span><span class="p">)</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="n">wnl</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">stem</span><span class="o">.</span><span class="n">WordNetLemmatizer</span><span class="p">()</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="n">lemmas</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">tokenized_col</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="p">[</span><span class="n">wnl</span><span class="o">.</span><span class="n">lemmatize</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">row</span><span class="p">])</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;lemmatized&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lemmas</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create the Lemmatizer</span>
+
+<span class="n">wnl</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">stem</span><span class="o">.</span><span class="n">WordNetLemmatizer</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Lemmatize each token from our clean_tokes Series of lists</span>
+
+<span class="n">lemmas</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">clean_tokes</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="p">[</span><span class="n">wnl</span><span class="o">.</span><span class="n">lemmatize</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">row</span><span class="p">])</span>
+<span class="n">lemmas</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[44]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    [u, biotech, company, novavax, said, it, ha, started, phase, 1, clinical, trial, of, it, experimental, coronavirus, vaccine, and, ha, enrolled, 130, volunteer, novavaxs, valuation, ha, surged, by, over, 1000, this, year, to, about, 27, billion, despite, having, no, product, on, the, market, the,...
+1    [india, economy, is, estimated, to, have, grown, at, 12, for, the, quarter, ended, march, 2020, said, the, sbis, ecowrap, report, it, said, the, economic, activity, in, the, last, seven, day, of, march, wa, completely, suspended, due, to, lockdown, causing, an, estimated, loss, of, around, 14, l...
+Name: clean_tokes, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Join our cleaned, lemmatized lists of words back into sentences</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;lemmatized&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lemmas</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;basic_clean&#39;</span><span class="p">,</span> <span class="s1">&#39;lemmatized&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[46]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>basic_clean</th>
       <th>lemmatized</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavax's valuation has surged by over 1000 this year to about 27 billion despite having no products on the market the trial is being supported by 388 mil...</td>
-      <td>u biotech company novavax said it ha started phase 1 clinical trial of it experimental coronavirus vaccine and ha enrolled 130 volunteer novavax ' s valuation ha surged by over 1000 this year to about 27 billion despite having no product on the market the trial is being supported by 388 million ...</td>
+      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavaxs valuation has surged by over 1000 this year to about 27 billion despite having no products on the market the trial is being supported by 388 mill...</td>
+      <td>u biotech company novavax said it ha started phase 1 clinical trial of it experimental coronavirus vaccine and ha enrolled 130 volunteer novavaxs valuation ha surged by over 1000 this year to about 27 billion despite having no product on the market the trial is being supported by 388 million in ...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>india's economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi's ecowrap report it said the economic activity in the last seven days of march was completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the a...</td>
-      <td>india ' s economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi ' s ecowrap report it said the economic activity in the last seven day of march wa completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the...</td>
+      <td>indias economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbis ecowrap report it said the economic activity in the last seven days of march was completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the ann...</td>
+      <td>india economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbis ecowrap report it said the economic activity in the last seven day of march wa completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the annual...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Just a quick sanity check that these are actually changing something...</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">stemmed</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">98</span><span class="p">]</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">lemmatized</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">98</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[47]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><font color=green>Now What?</font></strong></p>
+<h5 id="Lemmatize-Function">Lemmatize Function<a class="anchor-link" href="#Lemmatize-Function">&#182;</a></h5>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">lemmatize</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This function takes in a df and a string for column name and</span>
+<span class="sd">    returns the original df with a new column called &#39;lemmatized&#39;.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c1"># Create the lemmatizer</span>
+    <span class="n">wnl</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">stem</span><span class="o">.</span><span class="n">WordNetLemmatizer</span><span class="p">()</span>
+    
+    <span class="c1"># Lemmatize each token from our clean_tokes Series of lists</span>
+    <span class="n">lemmas</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="p">[</span><span class="n">wnl</span><span class="o">.</span><span class="n">lemmatize</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">row</span><span class="p">])</span>
+    
+    <span class="c1"># Join the cleaned and lemmatized tokens back into sentences</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;lemmatized&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lemmas</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">lemmatize</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;clean_tokes&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[[</span><span class="s1">&#39;basic_clean&#39;</span><span class="p">,</span> <span class="s1">&#39;lemmatized&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[49]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>basic_clean</th>
+      <th>lemmatized</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavaxs valuation has surged by over 1000 this year to about 27 billion despite having no products on the market the trial is being supported by 388 mill...</td>
+      <td>u biotech company novavax said it ha started phase 1 clinical trial of it experimental coronavirus vaccine and ha enrolled 130 volunteer novavaxs valuation ha surged by over 1000 this year to about 27 billion despite having no product on the market the trial is being supported by 388 million in ...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>indias economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbis ecowrap report it said the economic activity in the last seven days of march was completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the ann...</td>
+      <td>india economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbis ecowrap report it said the economic activity in the last seven day of march wa completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the annual...</td>
     </tr>
   </tbody>
 </table>
@@ -14633,7 +14633,7 @@ Name: clean_tokes, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create the list of stopwords</span>
@@ -14648,7 +14648,7 @@ Name: clean_tokes, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Split words in lemmatized column</span>
@@ -14668,7 +14668,7 @@ Name: clean_tokes, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;basic_clean&#39;</span><span class="p">,</span> <span class="s1">&#39;clean_lemmatized&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -14684,7 +14684,7 @@ Name: clean_tokes, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[37]:</div>
+    <div class="prompt output_prompt">Out[52]:</div>
 
 
 
@@ -14714,13 +14714,13 @@ Name: clean_tokes, dtype: object</pre>
   <tbody>
     <tr>
       <th>0</th>
-      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavax's valuation has surged by over 1000 this year to about 27 billion despite having no products on the market the trial is being supported by 388 mil...</td>
-      <td>u biotech company novavax said ha started phase 1 clinical trial experimental coronavirus vaccine ha enrolled 130 volunteer novavax ' valuation ha surged 1000 year 27 billion despite product market trial supported 388 million funding coalition epidemic preparedness innovation cepi</td>
+      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavaxs valuation has surged by over 1000 this year to about 27 billion despite having no products on the market the trial is being supported by 388 mill...</td>
+      <td>u biotech company novavax said ha started phase 1 clinical trial experimental coronavirus vaccine ha enrolled 130 volunteer novavaxs valuation ha surged 1000 year 27 billion despite product market trial supported 388 million funding coalition epidemic preparedness innovation cepi</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>india's economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi's ecowrap report it said the economic activity in the last seven days of march was completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the a...</td>
-      <td>india ' economy estimated grown 12 quarter ended march 2020 said sbi ' ecowrap report said economic activity last seven day march wa completely suspended due lockdown causing estimated loss around 14 lakh crore subsequently projected annual gdp growth 201920 around 42</td>
+      <td>indias economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbis ecowrap report it said the economic activity in the last seven days of march was completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the ann...</td>
+      <td>india economy estimated grown 12 quarter ended march 2020 said sbis ecowrap report said economic activity last seven day march wa completely suspended due lockdown causing estimated loss around 14 lakh crore subsequently projected annual gdp growth 201920 around 42</td>
     </tr>
   </tbody>
 </table>
@@ -14735,7 +14735,7 @@ Name: clean_tokes, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Do the same as above but for stemmed words</span>
@@ -14753,7 +14753,7 @@ Name: clean_tokes, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;basic_clean&#39;</span><span class="p">,</span> <span class="s1">&#39;clean_stemmed&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -14769,7 +14769,7 @@ Name: clean_tokes, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[39]:</div>
+    <div class="prompt output_prompt">Out[54]:</div>
 
 
 
@@ -14799,13 +14799,13 @@ Name: clean_tokes, dtype: object</pre>
   <tbody>
     <tr>
       <th>0</th>
-      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavax's valuation has surged by over 1000 this year to about 27 billion despite having no products on the market the trial is being supported by 388 mil...</td>
-      <td>us biotech compani novavax said ha start phase 1 clinic trial experiment coronaviru vaccin ha enrol 130 volunt novavax ' valuat ha surg 1000 thi year 27 billion despit product market trial support 388 million fund coalit epidem prepared innov cepi</td>
+      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavaxs valuation has surged by over 1000 this year to about 27 billion despite having no products on the market the trial is being supported by 388 mill...</td>
+      <td>us biotech compani novavax said ha start phase 1 clinic trial experiment coronaviru vaccin ha enrol 130 volunt novavax valuat ha surg 1000 thi year 27 billion despit product market trial support 388 million fund coalit epidem prepared innov cepi</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>india's economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi's ecowrap report it said the economic activity in the last seven days of march was completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the a...</td>
-      <td>india ' economi estim grown 12 quarter end march 2020 said sbi ' ecowrap report said econom activ last seven day march wa complet suspend due lockdown caus estim loss around 14 lakh crore subsequ project annual gdp growth 201920 around 42</td>
+      <td>indias economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbis ecowrap report it said the economic activity in the last seven days of march was completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the ann...</td>
+      <td>india economi estim grown 12 quarter end march 2020 said sbi ecowrap report said econom activ last seven day march wa complet suspend due lockdown caus estim loss around 14 lakh crore subsequ project annual gdp growth 201920 around 42</td>
     </tr>
   </tbody>
 </table>
@@ -14828,7 +14828,7 @@ Name: clean_tokes, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">remove_stopwords</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span>
@@ -14858,7 +14858,7 @@ Name: clean_tokes, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">remove_stopwords</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;lemmatized&#39;</span><span class="p">)</span>
@@ -14875,7 +14875,7 @@ Name: clean_tokes, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[41]:</div>
+    <div class="prompt output_prompt">Out[56]:</div>
 
 
 
@@ -14905,13 +14905,13 @@ Name: clean_tokes, dtype: object</pre>
   <tbody>
     <tr>
       <th>0</th>
-      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavax's valuation has surged by over 1000 this year to about 27 billion despite having no products on the market the trial is being supported by 388 mil...</td>
-      <td>u biotech company novavax said ha started phase 1 clinical trial experimental coronavirus vaccine ha enrolled 130 volunteer novavax ' valuation ha surged 1000 year 27 billion despite product market trial supported 388 million funding coalition epidemic preparedness innovation cepi</td>
+      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavaxs valuation has surged by over 1000 this year to about 27 billion despite having no products on the market the trial is being supported by 388 mill...</td>
+      <td>u biotech company novavax said ha started phase 1 clinical trial experimental coronavirus vaccine ha enrolled 130 volunteer novavaxs valuation ha surged 1000 year 27 billion despite product market trial supported 388 million funding coalition epidemic preparedness innovation cepi</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>india's economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi's ecowrap report it said the economic activity in the last seven days of march was completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the a...</td>
-      <td>india ' economy estimated grown 12 quarter ended march 2020 said sbi ' ecowrap report said economic activity last seven day march wa completely suspended due lockdown causing estimated loss around 14 lakh crore subsequently projected annual gdp growth 201920 around 42</td>
+      <td>indias economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbis ecowrap report it said the economic activity in the last seven days of march was completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the ann...</td>
+      <td>india economy estimated grown 12 quarter ended march 2020 said sbis ecowrap report said economic activity last seven day march wa completely suspended due lockdown causing estimated loss around 14 lakh crore subsequently projected annual gdp growth 201920 around 42</td>
     </tr>
   </tbody>
 </table>
@@ -14934,7 +14934,7 @@ Name: clean_tokes, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">get_news_articles</span><span class="p">()</span>
@@ -14947,7 +14947,7 @@ Name: clean_tokes, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">prep_article_data</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
@@ -14984,7 +14984,7 @@ Name: clean_tokes, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">prep_article_data</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
@@ -15001,7 +15001,7 @@ Name: clean_tokes, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[44]:</div>
+    <div class="prompt output_prompt">Out[59]:</div>
 
 
 
@@ -15039,8 +15039,8 @@ Name: clean_tokes, dtype: object</pre>
       <td>Firm whose stock surged 1000% in 2020 starts human trials of Covid-19 vaccine</td>
       <td>Krishna Veera Vanamali</td>
       <td>US biotech company Novavax said it has started Phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers. Novavax's valuation has surged by over 1,000% this year to about $2.7 billion despite having no products on the market. The trial is being supported by $...</td>
-      <td>us biotech compani novavax said ha start phase 1 clinic trial experiment coronaviru vaccin ha enrol 130 volunt novavax ' valuat ha surg 1000 thi year 27 billion despit product market trial support 388 million fund coalit epidem prepared innov cepi</td>
-      <td>u biotech company novavax said ha started phase 1 clinical trial experimental coronavirus vaccine ha enrolled 130 volunteer novavax ' valuation ha surged 1000 year 27 billion despite product market trial supported 388 million funding coalition epidemic preparedness innovation cepi</td>
+      <td>us biotech compani novavax said ha start phase 1 clinic trial experiment coronaviru vaccin ha enrol 130 volunt novavax valuat ha surg 1000 thi year 27 billion despit product market trial support 388 million fund coalit epidem prepared innov cepi</td>
+      <td>u biotech company novavax said ha started phase 1 clinical trial experimental coronavirus vaccine ha enrolled 130 volunteer novavaxs valuation ha surged 1000 year 27 billion despite product market trial supported 388 million funding coalition epidemic preparedness innovation cepi</td>
     </tr>
     <tr>
       <th>1</th>
@@ -15048,8 +15048,8 @@ Name: clean_tokes, dtype: object</pre>
       <td>India's economic growth seen at 1.2% in Q4 FY20: SBI report</td>
       <td>Dharna</td>
       <td>India's economy is estimated to have grown at 1.2% for the quarter ended March 2020, said the SBI's Ecowrap report. It said the economic activity in the last seven days of March was completely suspended due to lockdown, causing an estimated loss of around ₹1.4 lakh crore. Subsequently, it projec...</td>
-      <td>india ' economi estim grown 12 quarter end march 2020 said sbi ' ecowrap report said econom activ last seven day march wa complet suspend due lockdown caus estim loss around 14 lakh crore subsequ project annual gdp growth 201920 around 42</td>
-      <td>india ' economy estimated grown 12 quarter ended march 2020 said sbi ' ecowrap report said economic activity last seven day march wa completely suspended due lockdown causing estimated loss around 14 lakh crore subsequently projected annual gdp growth 201920 around 42</td>
+      <td>india economi estim grown 12 quarter end march 2020 said sbi ecowrap report said econom activ last seven day march wa complet suspend due lockdown caus estim loss around 14 lakh crore subsequ project annual gdp growth 201920 around 42</td>
+      <td>india economy estimated grown 12 quarter ended march 2020 said sbis ecowrap report said economic activity last seven day march wa completely suspended due lockdown causing estimated loss around 14 lakh crore subsequently projected annual gdp growth 201920 around 42</td>
     </tr>
   </tbody>
 </table>
