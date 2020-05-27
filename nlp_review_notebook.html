@@ -13730,7 +13730,7 @@ Name: content, Length: 99, dtype: object</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Using-Regex">Using Regex<a class="anchor-link" href="#Using-Regex">&#182;</a></h5><p><strong><font color=purple>Identifiers</font></strong></p>
+<h5 id="Using-Regex">Using Regex<a class="anchor-link" href="#Using-Regex">&#182;</a></h5><p><font color=purple>Identifiers</font></p>
 <p><table ><tr><th>Character</th><th>Description</th><th>Example Pattern Code</th><th >Exammple Match</th></tr></p>
 <p><tr ><td><span >\d</span></td><td>A digit</td><td>file_\d\d</td><td>file_25</td></tr></p>
 <p><tr ><td><span >\w</span></td><td>Alphanumeric</td><td>\w-\w\w\w</td><td>A-b_1</td></tr></p>
@@ -13738,14 +13738,14 @@ Name: content, Length: 99, dtype: object</pre>
 <p><tr ><td><span >\D</span></td><td>A non digit</td><td>\D\D\D</td><td>ABC</td></tr></p>
 <p><tr ><td><span >\W</span></td><td>Non-alphanumeric</td><td>\W\W\W\W\W</td><td>*-+=)</td></tr></p>
 <p><tr ><td><span >\S</span></td><td>Non-whitespace</td><td>\S\S\S\S</td><td>Yoyo</td></tr>&lt;/table&gt;</p>
-<p><strong><font color=purple>Quantifiers</font></strong></p>
+<p><font color=purple>Quantifiers</font></p>
 <p><table ><tr><th>Character</th><th>Description</th><th>Example Pattern Code</th><th >Exammple Match</th></tr></p>
 <p><tr ><td><span >+</span></td><td>Occurs one or more times</td><td>  Version \w-\w+</td><td>Version A-b1_1</td></tr></p>
 <p><tr ><td><span >{3}</span></td><td>Occurs exactly 3 times</td><td>\D{3}</td><td>abc</td></tr></p>
 <p><tr ><td><span >{2,4}</span></td><td>Occurs 2 to 4 times</td><td>\d{2,4}</td><td>123</td></tr></p>
 <p><tr ><td><span >{3,}</span></td><td>Occurs 3 or more</td><td>\w{3,}</td><td>anycharacters</td></tr></p>
 <p><tr ><td><span >\*</span></td><td>Occurs zero or more times</td><td>A\*B\*C*</td><td>AAACC</td></tr>&lt;/table&gt;</p>
-<p><strong><font color=purple>More Regex</font></strong></p>
+<p><font color=purple>More Regex</font></p>
 <p><table ><tr><th>Character</th><th>Description</th><th>Example</th></tr></p>
 <p><tr ><td><span >|</span></td><td>or statement</td><td>r'dog|cat'</td></tr></p>
 <p><tr ><td><span >*</span></td><td>wildcard</td><td>r'.at'</td></tr></p>
@@ -14175,7 +14175,7 @@ Name: clean_tokes, dtype: object</pre>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We can do a quick visual check that our stemmer is working.</span>
 
-<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_colwidth</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_colwidth</span> <span class="o">=</span> <span class="mi">300</span>
 <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;basic_clean&#39;</span><span class="p">,</span> <span class="s1">&#39;stemmed&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
@@ -14219,13 +14219,13 @@ Name: clean_tokes, dtype: object</pre>
   <tbody>
     <tr>
       <th>0</th>
-      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavax's valuation has surged by over 1000 this year ...</td>
-      <td>us biotech compani novavax said it ha start phase 1 clinic trial of it experiment coronaviru vaccin and ha enrol 130 volunt novavax ' s valuat ha surg by over 1000 thi year to about 27 billion des...</td>
+      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavax's valuation has surged by over 1000 this year to about 27 billion despite having no products on the market the trial is being supported by 388 mil...</td>
+      <td>us biotech compani novavax said it ha start phase 1 clinic trial of it experiment coronaviru vaccin and ha enrol 130 volunt novavax ' s valuat ha surg by over 1000 thi year to about 27 billion despit have no product on the market the trial is be support by 388 million in fund from the coalit for...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>india's economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi's ecowrap report it said the economic activity in the last seven days of march was completely suspend...</td>
-      <td>india ' s economi is estim to have grown at 12 for the quarter end march 2020 said the sbi ' s ecowrap report it said the econom activ in the last seven day of march wa complet suspend due to lock...</td>
+      <td>india's economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi's ecowrap report it said the economic activity in the last seven days of march was completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the a...</td>
+      <td>india ' s economi is estim to have grown at 12 for the quarter end march 2020 said the sbi ' s ecowrap report it said the econom activ in the last seven day of march wa complet suspend due to lockdown caus an estim loss of around 14 lakh crore subsequ it project the annual gdp growth for 201920 ...</td>
     </tr>
   </tbody>
 </table>
@@ -14322,13 +14322,13 @@ Name: clean_tokes, dtype: object</pre>
   <tbody>
     <tr>
       <th>97</th>
-      <td>karan johar on tuesday took to instagram to thank fashion designer manish malhotra for sending him the best birthday present which was over an hourlong video of messages from johar's close friends...</td>
-      <td>[karan, johar, on, tuesday, took, to, instagram, to, thank, fashion, designer, manish, malhotra, for, sending, him, the, best, birthday, present, which, was, over, an, hourlong, video, of, message...</td>
+      <td>karan johar on tuesday took to instagram to thank fashion designer manish malhotra for sending him the best birthday present which was over an hourlong video of messages from johar's close friends and family i was overwhelmedwatching itit made my daymy year and many years ahead as well he wrote ...</td>
+      <td>[karan, johar, on, tuesday, took, to, instagram, to, thank, fashion, designer, manish, malhotra, for, sending, him, the, best, birthday, present, which, was, over, an, hourlong, video, of, messages, from, johar, ', s, close, friends, and, family, i, was, overwhelmedwatching, itit, made, my, daym...</td>
     </tr>
     <tr>
       <th>98</th>
-      <td>stating that the loss caused by cyclone amphan is heartbreaking bhumi pednekar said it is high time that humanity understands what we have put our planet through in front of nature's wrath we all ...</td>
-      <td>[stating, that, the, loss, caused, by, cyclone, amphan, is, heartbreaking, bhumi, pednekar, said, it, is, high, time, that, humanity, understands, what, we, have, put, our, planet, through, in, fr...</td>
+      <td>stating that the loss caused by cyclone amphan is heartbreaking bhumi pednekar said it is high time that humanity understands what we have put our planet through in front of nature's wrath we all are one i really hope humanity wakes up she further said bhumi shared she is very passionate about n...</td>
+      <td>[stating, that, the, loss, caused, by, cyclone, amphan, is, heartbreaking, bhumi, pednekar, said, it, is, high, time, that, humanity, understands, what, we, have, put, our, planet, through, in, front, of, nature, ', s, wrath, we, all, are, one, i, really, hope, humanity, wakes, up, she, further,...</td>
     </tr>
   </tbody>
 </table>
@@ -14399,8 +14399,8 @@ Name: clean_tokes, dtype: object</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0    [u, biotech, company, novavax, said, it, ha, started, phase, 1, clinical, trial, of, it, experimental, coronavirus, vaccine, and, ha, enrolled, 130, volunteer, novavax, &#39;, s, valuation, ha, surged...
-1    [india, &#39;, s, economy, is, estimated, to, have, grown, at, 12, for, the, quarter, ended, march, 2020, said, the, sbi, &#39;, s, ecowrap, report, it, said, the, economic, activity, in, the, last, seven...
+<pre>0    [u, biotech, company, novavax, said, it, ha, started, phase, 1, clinical, trial, of, it, experimental, coronavirus, vaccine, and, ha, enrolled, 130, volunteer, novavax, &#39;, s, valuation, ha, surged, by, over, 1000, this, year, to, about, 27, billion, despite, having, no, product, on, the, market,...
+1    [india, &#39;, s, economy, is, estimated, to, have, grown, at, 12, for, the, quarter, ended, march, 2020, said, the, sbi, &#39;, s, ecowrap, report, it, said, the, economic, activity, in, the, last, seven, day, of, march, wa, completely, suspended, due, to, lockdown, causing, an, estimated, loss, of, ar...
 Name: clean_tokes, dtype: object</pre>
 </div>
 
@@ -14473,13 +14473,13 @@ Name: clean_tokes, dtype: object</pre>
   <tbody>
     <tr>
       <th>0</th>
-      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavax's valuation has surged by over 1000 this year ...</td>
-      <td>u biotech company novavax said it ha started phase 1 clinical trial of it experimental coronavirus vaccine and ha enrolled 130 volunteer novavax ' s valuation ha surged by over 1000 this year to a...</td>
+      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavax's valuation has surged by over 1000 this year to about 27 billion despite having no products on the market the trial is being supported by 388 mil...</td>
+      <td>u biotech company novavax said it ha started phase 1 clinical trial of it experimental coronavirus vaccine and ha enrolled 130 volunteer novavax ' s valuation ha surged by over 1000 this year to about 27 billion despite having no product on the market the trial is being supported by 388 million ...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>india's economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi's ecowrap report it said the economic activity in the last seven days of march was completely suspend...</td>
-      <td>india ' s economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi ' s ecowrap report it said the economic activity in the last seven day of march wa completely suspe...</td>
+      <td>india's economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi's ecowrap report it said the economic activity in the last seven days of march was completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the a...</td>
+      <td>india ' s economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi ' s ecowrap report it said the economic activity in the last seven day of march wa completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the...</td>
     </tr>
   </tbody>
 </table>
@@ -14610,13 +14610,13 @@ Name: clean_tokes, dtype: object</pre>
   <tbody>
     <tr>
       <th>0</th>
-      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavax's valuation has surged by over 1000 this year ...</td>
-      <td>u biotech company novavax said it ha started phase 1 clinical trial of it experimental coronavirus vaccine and ha enrolled 130 volunteer novavax ' s valuation ha surged by over 1000 this year to a...</td>
+      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavax's valuation has surged by over 1000 this year to about 27 billion despite having no products on the market the trial is being supported by 388 mil...</td>
+      <td>u biotech company novavax said it ha started phase 1 clinical trial of it experimental coronavirus vaccine and ha enrolled 130 volunteer novavax ' s valuation ha surged by over 1000 this year to about 27 billion despite having no product on the market the trial is being supported by 388 million ...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>india's economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi's ecowrap report it said the economic activity in the last seven days of march was completely suspend...</td>
-      <td>india ' s economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi ' s ecowrap report it said the economic activity in the last seven day of march wa completely suspe...</td>
+      <td>india's economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi's ecowrap report it said the economic activity in the last seven days of march was completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the a...</td>
+      <td>india ' s economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi ' s ecowrap report it said the economic activity in the last seven day of march wa completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the...</td>
     </tr>
   </tbody>
 </table>
@@ -14748,13 +14748,13 @@ Name: clean_tokes, dtype: object</pre>
   <tbody>
     <tr>
       <th>0</th>
-      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavax's valuation has surged by over 1000 this year ...</td>
-      <td>us biotech compani novavax said ha start phase 1 clinic trial experiment coronaviru vaccin ha enrol 130 volunt novavax ' valuat ha surg 1000 thi year 27 billion despit product market trial support...</td>
+      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavax's valuation has surged by over 1000 this year to about 27 billion despite having no products on the market the trial is being supported by 388 mil...</td>
+      <td>us biotech compani novavax said ha start phase 1 clinic trial experiment coronaviru vaccin ha enrol 130 volunt novavax ' valuat ha surg 1000 thi year 27 billion despit product market trial support 388 million fund coalit epidem prepared innov cepi</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>india's economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi's ecowrap report it said the economic activity in the last seven days of march was completely suspend...</td>
-      <td>india ' economi estim grown 12 quarter end march 2020 said sbi ' ecowrap report said econom activ last seven day march wa complet suspend due lockdown caus estim loss around 14 lakh crore subsequ ...</td>
+      <td>india's economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi's ecowrap report it said the economic activity in the last seven days of march was completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the a...</td>
+      <td>india ' economi estim grown 12 quarter end march 2020 said sbi ' ecowrap report said econom activ last seven day march wa complet suspend due lockdown caus estim loss around 14 lakh crore subsequ project annual gdp growth 201920 around 42</td>
     </tr>
   </tbody>
 </table>
@@ -14854,13 +14854,13 @@ Name: clean_tokes, dtype: object</pre>
   <tbody>
     <tr>
       <th>0</th>
-      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavax's valuation has surged by over 1000 this year ...</td>
-      <td>us biotech compani novavax said it ha start phase 1 clinic trial of it experiment coronaviru vaccin and ha enrol 130 volunt novavax ' s valuat ha surg by over 1000 thi year to about 27 billion des...</td>
+      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavax's valuation has surged by over 1000 this year to about 27 billion despite having no products on the market the trial is being supported by 388 mil...</td>
+      <td>us biotech compani novavax said it ha start phase 1 clinic trial of it experiment coronaviru vaccin and ha enrol 130 volunt novavax ' s valuat ha surg by over 1000 thi year to about 27 billion despit have no product on the market the trial is be support by 388 million in fund from the coalit for...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>india's economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi's ecowrap report it said the economic activity in the last seven days of march was completely suspend...</td>
-      <td>india ' s economi is estim to have grown at 12 for the quarter end march 2020 said the sbi ' s ecowrap report it said the econom activ in the last seven day of march wa complet suspend due to lock...</td>
+      <td>india's economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi's ecowrap report it said the economic activity in the last seven days of march was completely suspended due to lockdown causing an estimated loss of around 14 lakh crore subsequently it projected the a...</td>
+      <td>india ' s economi is estim to have grown at 12 for the quarter end march 2020 said the sbi ' s ecowrap report it said the econom activ in the last seven day of march wa complet suspend due to lockdown caus an estim loss of around 14 lakh crore subsequ it project the annual gdp growth for 201920 ...</td>
     </tr>
   </tbody>
 </table>
@@ -14987,18 +14987,18 @@ Name: clean_tokes, dtype: object</pre>
       <td>business</td>
       <td>Firm whose stock surged 1000% in 2020 starts human trials of Covid-19 vaccine</td>
       <td>Krishna Veera Vanamali</td>
-      <td>US biotech company Novavax said it has started Phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers. Novavax's valuation has surged by over 1,000% this ye...</td>
-      <td>us biotech compani novavax said ha start phase 1 clinic trial experiment coronaviru vaccin ha enrol 130 volunt novavax ' valuat ha surg 1000 thi year 27 billion despit product market trial support...</td>
-      <td>u biotech company novavax said ha started phase 1 clinical trial experimental coronavirus vaccine ha enrolled 130 volunteer novavax ' valuation ha surged 1000 year 27 billion despite product marke...</td>
+      <td>US biotech company Novavax said it has started Phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers. Novavax's valuation has surged by over 1,000% this year to about $2.7 billion despite having no products on the market. The trial is being supported by $...</td>
+      <td>us biotech compani novavax said ha start phase 1 clinic trial experiment coronaviru vaccin ha enrol 130 volunt novavax ' valuat ha surg 1000 thi year 27 billion despit product market trial support 388 million fund coalit epidem prepared innov cepi</td>
+      <td>u biotech company novavax said ha started phase 1 clinical trial experimental coronavirus vaccine ha enrolled 130 volunteer novavax ' valuation ha surged 1000 year 27 billion despite product market trial supported 388 million funding coalition epidemic preparedness innovation cepi</td>
     </tr>
     <tr>
       <th>1</th>
       <td>business</td>
       <td>India's economic growth seen at 1.2% in Q4 FY20: SBI report</td>
       <td>Dharna</td>
-      <td>India's economy is estimated to have grown at 1.2% for the quarter ended March 2020, said the SBI's Ecowrap report. It said the economic activity in the last seven days of March was completely sus...</td>
-      <td>india ' economi estim grown 12 quarter end march 2020 said sbi ' ecowrap report said econom activ last seven day march wa complet suspend due lockdown caus estim loss around 14 lakh crore subsequ ...</td>
-      <td>india ' economy estimated grown 12 quarter ended march 2020 said sbi ' ecowrap report said economic activity last seven day march wa completely suspended due lockdown causing estimated loss around...</td>
+      <td>India's economy is estimated to have grown at 1.2% for the quarter ended March 2020, said the SBI's Ecowrap report. It said the economic activity in the last seven days of March was completely suspended due to lockdown, causing an estimated loss of around ₹1.4 lakh crore. Subsequently, it projec...</td>
+      <td>india ' economi estim grown 12 quarter end march 2020 said sbi ' ecowrap report said econom activ last seven day march wa complet suspend due lockdown caus estim loss around 14 lakh crore subsequ project annual gdp growth 201920 around 42</td>
+      <td>india ' economy estimated grown 12 quarter ended march 2020 said sbi ' ecowrap report said economic activity last seven day march wa completely suspended due lockdown causing estimated loss around 14 lakh crore subsequently projected annual gdp growth 201920 around 42</td>
     </tr>
   </tbody>
 </table>
