@@ -13070,28 +13070,6 @@ div#notebook {
     });
     </script>
     <!-- End of mathjax configuration --></head>
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-
-<link rel="stylesheet" type="text/css" href="https://rawgit.com/ipython-contrib/jupyter_contrib_nbextensions/master/src/jupyter_contrib_nbextensions/nbextensions/toc2/main.css">
-
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<script src="https://rawgit.com/ipython-contrib/jupyter_contrib_nbextensions/master/src/jupyter_contrib_nbextensions/nbextensions/toc2/toc2.js"></script>
-
-<script>
-$( document ).ready(function(){
-
-            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": true, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": true, "toc_position": {}, "toc_section_display": true, "toc_window_display": false};
-
-            // fire the main function with these parameters
-            require(['nbextensions/toc2/toc2'], function (toc2) {
-                toc2.table_of_contents(cfg);
-            });
-    });
-</script>
 <body>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
@@ -13766,14 +13744,13 @@ Name: content, Length: 99, dtype: object</pre>
 <p><tr ><td><span >{3}</span></td><td>Occurs exactly 3 times</td><td>\D{3}</td><td>abc</td></tr></p>
 <p><tr ><td><span >{2,4}</span></td><td>Occurs 2 to 4 times</td><td>\d{2,4}</td><td>123</td></tr></p>
 <p><tr ><td><span >{3,}</span></td><td>Occurs 3 or more</td><td>\w{3,}</td><td>anycharacters</td></tr></p>
-<p><tr ><td><span >\*</span></td><td>Occurs zero or more times</td><td>A\*B\*C*</td><td>AAACC</td></tr></p>
-<p><tr ><td><span >?</span></td><td>Once or none</td><td>plurals?</td><td>plural</td></tr>&lt;/table&gt;</p>
+<p><tr ><td><span >\*</span></td><td>Occurs zero or more times</td><td>A\*B\*C*</td><td>AAACC</td></tr>&lt;/table&gt;</p>
 <p><strong><font color=purple>More Regex</font></strong></p>
 <p><table ><tr><th>Character</th><th>Description</th><th>Example</th></tr></p>
 <p><tr ><td><span >|</span></td><td>or statement</td><td>r'dog|cat'</td></tr></p>
 <p><tr ><td><span >*</span></td><td>wildcard</td><td>r'.at'</td></tr></p>
 <p><tr ><td><span >^</span></td><td>starts with</td><td>r'^\d'</td></tr></p>
-<p><tr ><td><span >[^]</span></td><td>exclusion</td><td>r'[^a-z]'</td></tr></p>
+<p><tr ><td><span >?</span></td><td>Once or none</td><td>plurals?</td>&lt;/table&gt;</p>
 
 </div>
 </div>
@@ -14198,7 +14175,7 @@ Name: clean_tokes, dtype: object</pre>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We can do a quick visual check that our stemmer is working.</span>
 
-<span class="c1">#pd.options.display.max_colwidth = 300</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_colwidth</span> <span class="o">=</span> <span class="mi">200</span>
 <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;basic_clean&#39;</span><span class="p">,</span> <span class="s1">&#39;stemmed&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
@@ -14242,13 +14219,13 @@ Name: clean_tokes, dtype: object</pre>
   <tbody>
     <tr>
       <th>0</th>
-      <td>us biotech company novavax said it has started...</td>
-      <td>us biotech compani novavax said it ha start ph...</td>
+      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavax's valuation has surged by over 1000 this year ...</td>
+      <td>us biotech compani novavax said it ha start phase 1 clinic trial of it experiment coronaviru vaccin and ha enrol 130 volunt novavax ' s valuat ha surg by over 1000 thi year to about 27 billion des...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>india's economy is estimated to have grown at ...</td>
-      <td>india ' s economi is estim to have grown at 12...</td>
+      <td>india's economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi's ecowrap report it said the economic activity in the last seven days of march was completely suspend...</td>
+      <td>india ' s economi is estim to have grown at 12 for the quarter end march 2020 said the sbi ' s ecowrap report it said the econom activ in the last seven day of march wa complet suspend due to lock...</td>
     </tr>
   </tbody>
 </table>
@@ -14345,13 +14322,13 @@ Name: clean_tokes, dtype: object</pre>
   <tbody>
     <tr>
       <th>97</th>
-      <td>karan johar on tuesday took to instagram to th...</td>
-      <td>[karan, johar, on, tuesday, took, to, instagra...</td>
+      <td>karan johar on tuesday took to instagram to thank fashion designer manish malhotra for sending him the best birthday present which was over an hourlong video of messages from johar's close friends...</td>
+      <td>[karan, johar, on, tuesday, took, to, instagram, to, thank, fashion, designer, manish, malhotra, for, sending, him, the, best, birthday, present, which, was, over, an, hourlong, video, of, message...</td>
     </tr>
     <tr>
       <th>98</th>
-      <td>stating that the loss caused by cyclone amphan...</td>
-      <td>[stating, that, the, loss, caused, by, cyclone...</td>
+      <td>stating that the loss caused by cyclone amphan is heartbreaking bhumi pednekar said it is high time that humanity understands what we have put our planet through in front of nature's wrath we all ...</td>
+      <td>[stating, that, the, loss, caused, by, cyclone, amphan, is, heartbreaking, bhumi, pednekar, said, it, is, high, time, that, humanity, understands, what, we, have, put, our, planet, through, in, fr...</td>
     </tr>
   </tbody>
 </table>
@@ -14422,8 +14399,8 @@ Name: clean_tokes, dtype: object</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0    [u, biotech, company, novavax, said, it, ha, s...
-1    [india, &#39;, s, economy, is, estimated, to, have...
+<pre>0    [u, biotech, company, novavax, said, it, ha, started, phase, 1, clinical, trial, of, it, experimental, coronavirus, vaccine, and, ha, enrolled, 130, volunteer, novavax, &#39;, s, valuation, ha, surged...
+1    [india, &#39;, s, economy, is, estimated, to, have, grown, at, 12, for, the, quarter, ended, march, 2020, said, the, sbi, &#39;, s, ecowrap, report, it, said, the, economic, activity, in, the, last, seven...
 Name: clean_tokes, dtype: object</pre>
 </div>
 
@@ -14496,13 +14473,13 @@ Name: clean_tokes, dtype: object</pre>
   <tbody>
     <tr>
       <th>0</th>
-      <td>us biotech company novavax said it has started...</td>
-      <td>u biotech company novavax said it ha started p...</td>
+      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavax's valuation has surged by over 1000 this year ...</td>
+      <td>u biotech company novavax said it ha started phase 1 clinical trial of it experimental coronavirus vaccine and ha enrolled 130 volunteer novavax ' s valuation ha surged by over 1000 this year to a...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>india's economy is estimated to have grown at ...</td>
-      <td>india ' s economy is estimated to have grown a...</td>
+      <td>india's economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi's ecowrap report it said the economic activity in the last seven days of march was completely suspend...</td>
+      <td>india ' s economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi ' s ecowrap report it said the economic activity in the last seven day of march wa completely suspe...</td>
     </tr>
   </tbody>
 </table>
@@ -14633,13 +14610,13 @@ Name: clean_tokes, dtype: object</pre>
   <tbody>
     <tr>
       <th>0</th>
-      <td>us biotech company novavax said it has started...</td>
-      <td>u biotech company novavax said it ha started p...</td>
+      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavax's valuation has surged by over 1000 this year ...</td>
+      <td>u biotech company novavax said it ha started phase 1 clinical trial of it experimental coronavirus vaccine and ha enrolled 130 volunteer novavax ' s valuation ha surged by over 1000 this year to a...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>india's economy is estimated to have grown at ...</td>
-      <td>india ' s economy is estimated to have grown a...</td>
+      <td>india's economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi's ecowrap report it said the economic activity in the last seven days of march was completely suspend...</td>
+      <td>india ' s economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi ' s ecowrap report it said the economic activity in the last seven day of march wa completely suspe...</td>
     </tr>
   </tbody>
 </table>
@@ -14771,13 +14748,13 @@ Name: clean_tokes, dtype: object</pre>
   <tbody>
     <tr>
       <th>0</th>
-      <td>us biotech company novavax said it has started...</td>
-      <td>us biotech compani novavax said ha start phase...</td>
+      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavax's valuation has surged by over 1000 this year ...</td>
+      <td>us biotech compani novavax said ha start phase 1 clinic trial experiment coronaviru vaccin ha enrol 130 volunt novavax ' valuat ha surg 1000 thi year 27 billion despit product market trial support...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>india's economy is estimated to have grown at ...</td>
-      <td>india ' economi estim grown 12 quarter end mar...</td>
+      <td>india's economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi's ecowrap report it said the economic activity in the last seven days of march was completely suspend...</td>
+      <td>india ' economi estim grown 12 quarter end march 2020 said sbi ' ecowrap report said econom activ last seven day march wa complet suspend due lockdown caus estim loss around 14 lakh crore subsequ ...</td>
     </tr>
   </tbody>
 </table>
@@ -14877,13 +14854,13 @@ Name: clean_tokes, dtype: object</pre>
   <tbody>
     <tr>
       <th>0</th>
-      <td>us biotech company novavax said it has started...</td>
-      <td>us biotech compani novavax said it ha start ph...</td>
+      <td>us biotech company novavax said it has started phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers novavax's valuation has surged by over 1000 this year ...</td>
+      <td>us biotech compani novavax said it ha start phase 1 clinic trial of it experiment coronaviru vaccin and ha enrol 130 volunt novavax ' s valuat ha surg by over 1000 thi year to about 27 billion des...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>india's economy is estimated to have grown at ...</td>
-      <td>india ' s economi is estim to have grown at 12...</td>
+      <td>india's economy is estimated to have grown at 12 for the quarter ended march 2020 said the sbi's ecowrap report it said the economic activity in the last seven days of march was completely suspend...</td>
+      <td>india ' s economi is estim to have grown at 12 for the quarter end march 2020 said the sbi ' s ecowrap report it said the econom activ in the last seven day of march wa complet suspend due to lock...</td>
     </tr>
   </tbody>
 </table>
@@ -15008,20 +14985,20 @@ Name: clean_tokes, dtype: object</pre>
     <tr>
       <th>0</th>
       <td>business</td>
-      <td>Firm whose stock surged 1000% in 2020 starts h...</td>
+      <td>Firm whose stock surged 1000% in 2020 starts human trials of Covid-19 vaccine</td>
       <td>Krishna Veera Vanamali</td>
-      <td>US biotech company Novavax said it has started...</td>
-      <td>us biotech compani novavax said ha start phase...</td>
-      <td>u biotech company novavax said ha started phas...</td>
+      <td>US biotech company Novavax said it has started Phase 1 clinical trial of its experimental coronavirus vaccine and has enrolled 130 volunteers. Novavax's valuation has surged by over 1,000% this ye...</td>
+      <td>us biotech compani novavax said ha start phase 1 clinic trial experiment coronaviru vaccin ha enrol 130 volunt novavax ' valuat ha surg 1000 thi year 27 billion despit product market trial support...</td>
+      <td>u biotech company novavax said ha started phase 1 clinical trial experimental coronavirus vaccine ha enrolled 130 volunteer novavax ' valuation ha surged 1000 year 27 billion despite product marke...</td>
     </tr>
     <tr>
       <th>1</th>
       <td>business</td>
-      <td>India's economic growth seen at 1.2% in Q4 FY2...</td>
+      <td>India's economic growth seen at 1.2% in Q4 FY20: SBI report</td>
       <td>Dharna</td>
-      <td>India's economy is estimated to have grown at ...</td>
-      <td>india ' economi estim grown 12 quarter end mar...</td>
-      <td>india ' economy estimated grown 12 quarter end...</td>
+      <td>India's economy is estimated to have grown at 1.2% for the quarter ended March 2020, said the SBI's Ecowrap report. It said the economic activity in the last seven days of March was completely sus...</td>
+      <td>india ' economi estim grown 12 quarter end march 2020 said sbi ' ecowrap report said econom activ last seven day march wa complet suspend due lockdown caus estim loss around 14 lakh crore subsequ ...</td>
+      <td>india ' economy estimated grown 12 quarter ended march 2020 said sbi ' ecowrap report said economic activity last seven day march wa completely suspended due lockdown causing estimated loss around...</td>
     </tr>
   </tbody>
 </table>
