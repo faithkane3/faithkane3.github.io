@@ -13106,7 +13106,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -13137,13 +13137,13 @@ $( document ).ready(function(){
 </ul>
 <h4><strong><font color=orange>So What Do I Do With Beautiful Soup?</font></strong></h4>
 <p>Here, we are looking to retrieve content from a web page, but the web page is written in HTML (HyperText Markup Language), so we will use the <code>requests</code> library to get a response with the HTML from our desired page and <code>BeautifulSoup</code> to parse the HTML response. As you begin scraping, it would be helpful to have a basic understanding of the different HTML elements used to create web pages.</p>
-<h5 id="HTML-Elements">HTML Elements<a class="anchor-link" href="#HTML-Elements">&#182;</a></h5><p>An HTML element usually consists of a start tag <code>&lt;html&gt;</code> and en end tag <code>&lt;/html&gt;</code> with content between the tags.</p>
-<p><code>&lt;html&gt;</code> element defines the whole document</p>
-<p><code>&lt;body&gt;</code> element defines the document body</p>
-<p><code>&lt;h1&gt;</code> element defines a heading</p>
-<p><code>&lt;p&gt;</code> or paragraph element defines new pargraphs of text</p>
+<h5 id="HTML-Elements">HTML Elements<a class="anchor-link" href="#HTML-Elements">&#182;</a></h5><p>An HTML element usually consists of a start tag <code>&lt;html&gt;</code> and an end tag <code>&lt;/html&gt;</code> with content between the tags.</p>
+<p><code>&lt;html&gt;</code> element defines the whole document.</p>
+<p><code>&lt;body&gt;</code> element defines the document body.</p>
+<p><code>&lt;h1&gt;</code> element defines a heading.</p>
+<p><code>&lt;p&gt;</code> or paragraph element defines new pargraphs of text.</p>
 <p><code>&lt;a&gt;</code> element (tell the browser to render a link). <code>&lt;a&gt;</code> elements use the <code>href</code> attribute to tell the link where to go.</p>
-<p><code>&lt;div&gt;</code> element defines a division or area of the web page</p>
+<p><code>&lt;div&gt;</code> element defines a division or area, like a container, of the web page.</p>
 <p><code>&lt;img&gt;</code> element defines an image and uses the <code>src</code> attribute to hold the image address.</p>
 <h5 id="HTML-Attributes">HTML Attributes<a class="anchor-link" href="#HTML-Attributes">&#182;</a></h5><p>These are optional, but they make the HTML elements easier to work with because they give the elements names. You will have to examine a web page to find out if it uses these properties.</p>
 <p><code>class</code> is an attribute of an HTML element that defines equal styles for tags with the same class. One element can have multiple classes and different elements can share the same classes, so classes cannot be used as unique identifiers.</p>
@@ -13162,7 +13162,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://codeup.com/codeups-data-science-career-accelerator-is-here/&#39;</span>
@@ -13182,7 +13182,7 @@ $( document ).ready(function(){
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[2]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -13199,7 +13199,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Here&#39;s our long string; we&#39;ll use this to make our soup object</span>
@@ -13232,7 +13232,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Use BeautifulSoup using our response string</span>
@@ -13278,7 +13278,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># This is what the h1 element contains. I want to access the itemprop headline</span>
@@ -13296,7 +13296,7 @@ $( document ).ready(function(){
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -13313,7 +13313,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># I will use the find method on my soup passing in h1 element and itemprop attribute</span>
@@ -13347,7 +13347,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">title</span><span class="p">))</span>
@@ -13385,7 +13385,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># I will use the find method on my soup passing in h1 element and itemprop attribute</span>
@@ -13419,7 +13419,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>
@@ -13457,7 +13457,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;https://codeup.com/codeups-data-science-career-accelerator-is-here/&#39;</span><span class="p">,</span>
@@ -13470,8 +13470,9 @@ $( document ).ready(function(){
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    This function takes in a list of Codeup Blog urls and a parameter</span>
 <span class="sd">    with default cache == False which returns a df from a csv file.</span>
-<span class="sd">    If cache == True, the function scrapes the title and text for each url, creates a list of dictionaries</span>
-<span class="sd">    with the title and text for each blog, converts list to df, and returns df.</span>
+<span class="sd">    If cache == True, the function scrapes the title and text for each url, </span>
+<span class="sd">    creates a list of dictionaries with the title and text for each blog, </span>
+<span class="sd">    converts list to df, and returns df.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="k">if</span> <span class="n">cache</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
         <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;big_blogs.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -13501,6 +13502,7 @@ $( document ).ready(function(){
 
             <span class="c1"># Add each dictionary to the articles list of dictionaries</span>
             <span class="n">articles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">article</span><span class="p">)</span>
+            
         <span class="c1"># convert our list of dictionaries to a df</span>
         <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">articles</span><span class="p">)</span>
 
@@ -13616,7 +13618,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># I&#39;m going to hit Codeup&#39;s main blog page to scrape the urls</span>
@@ -13624,7 +13626,10 @@ $( document ).ready(function(){
 <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://codeup.com/resources/#blog&#39;</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Codeup Data Science&#39;</span><span class="p">}</span> 
 
+<span class="c1"># Request the HTML</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="c1"># Create the soup object to parse the HTML</span>
 <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
 </pre></div>
 
@@ -13635,7 +13640,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># I&#39;m using the `a` element with class_ to get a list of tag elements from my soup object</span>
@@ -13654,7 +13659,7 @@ $( document ).ready(function(){
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[37]:</div>
 
 
 
@@ -13672,14 +13677,14 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Using find_all has returned a bs ResultSet with 99 bs tags inside</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">link_list</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">link_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Our bs element ResultSet contains </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">link_list</span><span class="p">)</span><span class="si">}</span><span class="s1"> element tags.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Our variable link_list is a </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">link_list</span><span class="p">)</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Our element ResultSet is made up of </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">link_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Our ResultSet contains </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">link_list</span><span class="p">)</span><span class="si">}</span><span class="s1"> element tags.&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13696,9 +13701,9 @@ $( document ).ready(function(){
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;class &#39;bs4.element.ResultSet&#39;&gt;
-&lt;class &#39;bs4.element.Tag&#39;&gt;
-Our bs element ResultSet contains 99 element tags.
+<pre>Our variable link_list is a &lt;class &#39;bs4.element.ResultSet&#39;&gt;.
+Our element ResultSet is made up of &lt;class &#39;bs4.element.Tag&#39;&gt;.
+Our ResultSet contains 99 element tags.
 </pre>
 </div>
 </div>
@@ -13709,7 +13714,7 @@ Our bs element ResultSet contains 99 element tags.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create empty urls list and for each tag above, grab the href/link</span>
@@ -13727,7 +13732,7 @@ Our bs element ResultSet contains 99 element tags.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Wow, 99 links! Ready to scrape titles and text from each</span>
@@ -13757,7 +13762,7 @@ Our bs element ResultSet contains 99 element tags.
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[45]:</div>
 
 
 
@@ -13835,6 +13840,7 @@ Our bs element ResultSet contains 99 element tags.
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Now I can use my same function with my new urls list function!</span>
+<span class="c1"># cache == True does a fresh scrape.</span>
 
 <span class="n">big_blogs</span> <span class="o">=</span> <span class="n">get_blog_articles</span><span class="p">(</span><span class="n">urls</span><span class="o">=</span><span class="n">get_all_urls</span><span class="p">(),</span> <span class="n">cache</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
@@ -13970,7 +13976,9 @@ memory usage: 1.7+ KB
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">big_blogs</span> <span class="o">=</span> <span class="n">get_blog_articles</span><span class="p">(</span><span class="n">urls</span><span class="o">=</span><span class="n">get_all_urls</span><span class="p">(),</span> <span class="n">cache</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># cache == False reads in a df from the `big_blogs.csv`.</span>
+
+<span class="n">big_blogs</span> <span class="o">=</span> <span class="n">get_blog_articles</span><span class="p">(</span><span class="n">urls</span><span class="o">=</span><span class="n">get_all_urls</span><span class="p">(),</span> <span class="n">cache</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">big_blogs</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -14129,7 +14137,7 @@ memory usage: 1.7+ KB
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Scrape a ResultSet of all the news cards on the page</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Scrape a ResultSet of all the news cards on the page and look at first card</span>
 
 <span class="n">cards</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s1">&#39;news-card&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">cards</span><span class="p">))</span>
@@ -14482,7 +14490,6 @@ memory usage: 1.7+ KB
             <span class="c1"># Create soup object using response from inshort</span>
             <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
 
-
             <span class="c1"># Scrape a ResultSet of all the news cards on the page</span>
             <span class="n">cards</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s1">&#39;news-card&#39;</span><span class="p">)</span>
 
@@ -14520,7 +14527,9 @@ memory usage: 1.7+ KB
 <div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">get_news_articles</span><span class="p">(</span><span class="n">cache</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Test our function with cache == True to do a freash scrape and write to `articles.csv`</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">get_news_articles</span><span class="p">(</span><span class="n">cache</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -14693,7 +14702,9 @@ memory usage: 3.2+ KB
 <div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">get_news_articles</span><span class="p">(</span><span class="n">cache</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Test our function to read in the df from `articles.csv`</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">get_news_articles</span><span class="p">(</span><span class="n">cache</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
