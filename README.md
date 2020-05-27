@@ -33,3 +33,15 @@
 - [Time Series Prepare Exercise Walkthrough](https://faithkane3.github.io/time_series_prepare/prepare_walkthrough)
 
 >For a quick, pretty view of the exercises.
+
+NLP Review Notebooks
+
+>These notebooks cover techniques to acquire text data for Natural Language Processing using the `BeautifulSoup` and `requests` libraries and techniques to prepare text data for use in NLP exploration and modeling.
+
+- [Acquisition with BeautifulSoup](https://faithkane3.github.io/beautiful_soup)
+
+>For a quick, pretty view of the NLP acquistion exercises.
+
+- [Data Prep for NLP](https://faithkane3.github.io/)
+
+>For a quick, pretty view of the NLP prepare exercises.
