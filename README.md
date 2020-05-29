@@ -42,6 +42,6 @@ NLP Review Notebooks
 
 >For a quick, pretty view of the NLP acquistion exercises.
 
-- [Data Prep for NLP](https://faithkane3.github.io/)
+- [Data Prep for NLP](https://faithkane3.github.io/nlp_review_notebook)
 
 >For a quick, pretty view of the NLP prepare exercises.
