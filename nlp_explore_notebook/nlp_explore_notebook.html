@@ -13740,9 +13740,9 @@ $( document ).ready(function(){
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>sports           25
+<pre>entertainment    25
 business         25
-entertainment    25
+sports           25
 technology       25
 Name: label, dtype: int64</pre>
 </div>
@@ -14272,8 +14272,8 @@ Name: label, dtype: int64</pre>
 </ul>
 <ul>
 <li><code>ngrams_compare()</code> will take in a df with a <code>label</code> column and a <code>text</code> column, 
-  an int: 1 for unigrams, 2 for bigrams, 3 for trigrams,
-  and a string for color for customization and display horizontal bar chart
+  an int: 1 for unigrams, 2 for bigrams, 3 for trigrams, a string for color customization,
+  and an int to set the max value on the x-axis to equalize subplot axes and display 
   subplots by topic with the top 20 common uni-, bi-, or trigrams.</li>
 </ul>
 
@@ -14877,12 +14877,12 @@ Name: label, dtype: int64</pre>
 <div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ngrams_compare</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ngrams_compare</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">xlim</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    This function takes in a df with a &#39;label&#39; column and a &#39;text&#39; column, </span>
-<span class="sd">    an int: 1 for unigrams, 2 for bigrams, 3 for trigrams,</span>
-<span class="sd">    and a string for color for customization and displays horizontal bar chart</span>
-<span class="sd">    subplots by topic with the top 20 common uni-, bi-, or trigrams.</span>
+<span class="sd">    an int: 1 for unigrams, 2 for bigrams, 3 for trigrams, a string for color customization, </span>
+<span class="sd">    and an int to set the max value on the x-axis to equalize subplot axes </span>
+<span class="sd">    and displays horizontal bar chart subplots by topic with the top 20 common uni-, bi-, or trigrams.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="c1"># create topics list to loop through</span>
     <span class="n">topics</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
@@ -14912,6 +14912,9 @@ Name: label, dtype: int64</pre>
         
         <span class="c1"># print customized title</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;20 Most Common &#39;</span> <span class="o">+</span> <span class="n">topic</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;-grams&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+        
+        <span class="c1"># set x-axis of horizontal bar chart</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">xlim</span><span class="p">)</span>
 
         <span class="c1"># reorder y-axis of horizontal bar chart</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
@@ -14931,7 +14934,7 @@ Name: label, dtype: int64</pre>
 <div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ngrams_compare</span><span class="p">(</span><span class="n">df_lem</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;thistle&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ngrams_compare</span><span class="p">(</span><span class="n">df_lem</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;thistle&#39;</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14965,7 +14968,7 @@ Name: label, dtype: int64</pre>
 <div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ngrams_compare</span><span class="p">(</span><span class="n">df_lem</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;dodgerblue&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ngrams_compare</span><span class="p">(</span><span class="n">df_lem</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;dodgerblue&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14999,7 +15002,7 @@ Name: label, dtype: int64</pre>
 <div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ngrams_compare</span><span class="p">(</span><span class="n">df_lem</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;darkorange&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ngrams_compare</span><span class="p">(</span><span class="n">df_lem</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;darkorange&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15103,8 +15106,8 @@ Name: label, dtype: int64</pre>
 <pre>billion       14
 company       13
 crore         10
-india          9
 investment     9
+india          9
 dtype: int64</pre>
 </div>
 
@@ -15138,11 +15141,11 @@ dtype: int64</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>gaming          1
-son             1
-deal            1
-akash           1
-communicated    1
+<pre>largest    1
+looking    1
+fund       1
+founded    1
+cyrus      1
 dtype: int64</pre>
 </div>
 
@@ -15221,11 +15224,11 @@ dtype: int64</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>bhumi         1
-commenting    1
-utensil       1
-cm            1
-instance      1
+<pre>cine     1
+train    1
+child    1
+v        1
+urged    1
 dtype: int64</pre>
 </div>
 
@@ -15268,8 +15271,8 @@ dtype: int64</pre>
 <div class="output_text output_subarea output_execute_result">
 <pre>captain    11
 added      11
-cricket    10
 test       10
+cricket    10
 batsman     8
 dtype: int64</pre>
 </div>
@@ -15304,11 +15307,11 @@ dtype: int64</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>march            1
-elite            1
-ill              1
-inzamamulhaq     1
-international    1
+<pre>saleem      1
+sort        1
+starting    1
+major       1
+negative    1
 dtype: int64</pre>
 </div>
 
@@ -15350,8 +15353,8 @@ dtype: int64</pre>
 
 <div class="output_text output_subarea output_execute_result">
 <pre>user        13
-trump       11
 facebook    11
+trump       11
 platform    10
 google      10
 dtype: int64</pre>
@@ -15387,11 +15390,11 @@ dtype: int64</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>science     1
-april       1
-hacked      1
-catchup     1
-escobars    1
+<pre>ai           1
+consent      1
+divisive     1
+implement    1
+exploring    1
 dtype: int64</pre>
 </div>
 
@@ -15470,11 +15473,11 @@ dtype: int64</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>maanvi    1
-nine      1
-ill       1
-kl        1
-ab        1
+<pre>debut     1
+smooth    1
+zhao      1
+k         1
+okay      1
 dtype: int64</pre>
 </div>
 
@@ -16174,7 +16177,7 @@ dtype: int64</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>dict_items([((&#39;jio&#39;, &#39;platform&#39;), 4), ((&#39;lakh&#39;, &#39;crore&#39;), 4), ((&#39;virgin&#39;, &#39;orbit&#39;), 3), ((&#39;billion&#39;, &#39;month&#39;), 3), ((&#39;raised&#39;, &#39;billion&#39;), 3), ((&#39;reliance&#39;, &#39;industry&#39;), 3), ((&#39;coronavirus&#39;, &#39;pandemic&#39;), 3), ((&#39;firstever&#39;, &#39;bond&#39;), 2), ((&#39;vodafone&#39;, &#39;idea&#39;), 2), ((&#39;jio&#39;, &#39;raised&#39;), 2), ((&#39;baba&#39;, &#39;ramdevled&#39;), 2), ((&#39;donated&#39;, &#39;million&#39;), 2), ((&#39;rbi&#39;, &#39;bond&#39;), 2), ((&#39;reliance&#39;, &#39;group&#39;), 2), ((&#39;ramdevled&#39;, &#39;patanjali&#39;), 2), ((&#39;patanjali&#39;, &#39;ayurveds&#39;), 2), ((&#39;general&#39;, &#39;electric&#39;), 2), ((&#39;financial&#39;, &#39;year&#39;), 2), ((&#39;kent&#39;, &#39;ro&#39;), 2), ((&#39;air&#39;, &#39;india&#39;), 2)])</pre>
+<pre>dict_items([((&#39;jio&#39;, &#39;platform&#39;), 4), ((&#39;lakh&#39;, &#39;crore&#39;), 4), ((&#39;reliance&#39;, &#39;industry&#39;), 3), ((&#39;virgin&#39;, &#39;orbit&#39;), 3), ((&#39;raised&#39;, &#39;billion&#39;), 3), ((&#39;coronavirus&#39;, &#39;pandemic&#39;), 3), ((&#39;billion&#39;, &#39;month&#39;), 3), ((&#39;nonconvertible&#39;, &#39;debenture&#39;), 2), ((&#39;reliance&#39;, &#39;group&#39;), 2), ((&#39;cease&#39;, &#39;subscription&#39;), 2), ((&#39;jio&#39;, &#39;raised&#39;), 2), ((&#39;saving&#39;, &#39;bond&#39;), 2), ((&#39;finance&#39;, &#39;minister&#39;), 2), ((&#39;firstever&#39;, &#39;bond&#39;), 2), ((&#39;vodafone&#39;, &#39;idea&#39;), 2), ((&#39;baba&#39;, &#39;ramdevled&#39;), 2), ((&#39;financial&#39;, &#39;package&#39;), 2), ((&#39;donated&#39;, &#39;million&#39;), 2), ((&#39;government&#39;, &#39;announced&#39;), 2), ((&#39;patanjali&#39;, &#39;ayurveds&#39;), 2)])</pre>
 </div>
 
 </div>
@@ -16212,24 +16215,24 @@ dtype: int64</pre>
 <div class="output_text output_subarea output_execute_result">
 <pre>{&#39;jio platform&#39;: 4,
  &#39;lakh crore&#39;: 4,
- &#39;virgin orbit&#39;: 3,
- &#39;billion month&#39;: 3,
- &#39;raised billion&#39;: 3,
  &#39;reliance industry&#39;: 3,
+ &#39;virgin orbit&#39;: 3,
+ &#39;raised billion&#39;: 3,
  &#39;coronavirus pandemic&#39;: 3,
+ &#39;billion month&#39;: 3,
+ &#39;nonconvertible debenture&#39;: 2,
+ &#39;reliance group&#39;: 2,
+ &#39;cease subscription&#39;: 2,
+ &#39;jio raised&#39;: 2,
+ &#39;saving bond&#39;: 2,
+ &#39;finance minister&#39;: 2,
  &#39;firstever bond&#39;: 2,
  &#39;vodafone idea&#39;: 2,
- &#39;jio raised&#39;: 2,
  &#39;baba ramdevled&#39;: 2,
+ &#39;financial package&#39;: 2,
  &#39;donated million&#39;: 2,
- &#39;rbi bond&#39;: 2,
- &#39;reliance group&#39;: 2,
- &#39;ramdevled patanjali&#39;: 2,
- &#39;patanjali ayurveds&#39;: 2,
- &#39;general electric&#39;: 2,
- &#39;financial year&#39;: 2,
- &#39;kent ro&#39;: 2,
- &#39;air india&#39;: 2}</pre>
+ &#39;government announced&#39;: 2,
+ &#39;patanjali ayurveds&#39;: 2}</pre>
 </div>
 
 </div>
