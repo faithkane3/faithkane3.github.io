@@ -10,6 +10,18 @@
 
 >This notebook will show you how to install and use Nbextensions, use lot of exciting markdown code, and walk you through creating and using Github Pages to host your own notebooks as html.
 
+[SQL Review Notebook](https://faithkane3.github.io/)
+
+COMING SOON!
+
+>This notebook introduces SQL as a tool to interrogate databases and acquire data for use with python libraries like numpy and pandas. It will cover everything from basic queries using a single table to subqueries that involve joining tables and data filtering.
+
+[Pandas Review Notebook](https://faithkane3.github.io/)
+
+COMING SOON!
+
+>This notebook introduces the pandas library from Series objects to DataFrame objects including their common attributes, methods, and chaining techniques that employ both allowing for creative data manipulation.
+
 [Stats Review Notebook](https://faithkane3.github.io/stats_review)
 
 >This notebook covers Probability Distributions and Hypothesis Testing. I tried to make the concepts approachable and included lots of helpful examples and code snippets.
