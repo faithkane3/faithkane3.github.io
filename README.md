@@ -24,7 +24,7 @@
 
 [Time Series Review Notebook](https://faithkane3.github.io/time_series_review/time_series_review)
 
->This notebook covers the Time Series data science pipeline from Acquire through Evaluate. Again, I hope that the concepts are approachable, and I've included plenty of helpful code snippets for each stage of the pipeline.
+>This notebook is a work in progress. It will cover the Time Series data science pipeline from Acquire through Evaluate. At this point, it covers a high-level overview of the topic, a couple of ways to acquire time series data to practice with, and some techniques for preparation and exploration of the data. Again, I hope that the concepts are approachable, and I've included plenty of helpful code snippets for each stage of the pipeline.
 
 - [Time Series Acquire Exercise Walkthrough](https://faithkane3.github.io/acquire_walkthrough)
 
