@@ -45,3 +45,7 @@ NLP Review Notebooks
 - [Data Prep for NLP](https://faithkane3.github.io/nlp_review_notebook)
 
 >For a quick, pretty view of the NLP prepare exercises.
+
+- [Exploration for NLP](https://faithkane3.github.io/nlp_explore_notebook/nlp_explore_notebook)
+
+>This notebook provides a great start for exploring and analyzing your text data.
