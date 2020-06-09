@@ -13115,24 +13115,16 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Installing-Nbextensions-Configurator">Installing Nbextensions Configurator<a class="anchor-link" href="#Installing-Nbextensions-Configurator">&#182;</a></h2><ol>
-<li>Run the following from your command line:</li>
-</ol>
+<h2 id="Installing-Nbextensions-Configurator">Installing Nbextensions Configurator<a class="anchor-link" href="#Installing-Nbextensions-Configurator">&#182;</a></h2><p>1.Run the following from your command line:</p>
 <p style="background:black">
 <code style="background:black;color:white">conda install -c conda-forge jupyter_nbextensions_configurator
 </code>
 </p><p style="background:black">
 <code style="background:black;color:white">jupyter nbextensions_configurator enable --user
 </code>
-</p><ol>
-<li>Once installed, you'll need to restart the notebook server. </li>
-</ol>
-<ol>
-<li>Once restarted, you should be able to find the configurator in your <code>edit</code> tab at the top of your notebook.</li>
-</ol>
-<ol>
-<li>Check the box at the top of the Nbextensions Configurator like you see below. </li>
-</ol>
+</p><p>2.Once installed, you'll need to restart the notebook server.</p>
+<p>3.Once restarted, you should be able to find the configurator in your <code>edit</code> tab at the top of your notebook.</p>
+<p>4.Check the box at the top of the Nbextensions Configurator like you see below.</p>
 <ul>
 <li>[x] Some tasks disable configuration for nbextensions without explicit compatibility (they may break your notebook.)</li>
 </ul>
@@ -13153,25 +13145,19 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Publishing-your-notebook-on-your-own-site-as-html:">Publishing your notebook on your own site as html:<a class="anchor-link" href="#Publishing-your-notebook-on-your-own-site-as-html:">&#182;</a></h2><ol>
-<li>Get an html file to publish</li>
-</ol>
+<h2 id="Publishing-your-notebook-on-your-own-site-as-html:">Publishing your notebook on your own site as html:<a class="anchor-link" href="#Publishing-your-notebook-on-your-own-site-as-html:">&#182;</a></h2><p>1.Get an html file to publish</p>
 <blockquote><p>a.  Restart the kernel and run the notebook from top to bottom</p>
 <p>b.  From the jupyter notebook dowload as an html file</p>
 <p>c.  If you want your html file to have a Table of Contents, download as html with toc</p>
 </blockquote>
-<ol>
-<li>Make a repo on github that will be your internet site
- Github Pages[1] is a free service that github offers to host your websites.
- To get started:</li>
-</ol>
+<p>2.Make a repo on github that will be your internet site
+    Github Pages[1] is a free service that github offers to host your websites.
+    To get started:</p>
 <blockquote><p>a.  Create a repo on github (github.com/new) named exactly yourusername.github.io, i.e. faithkane3.github.io</p>
 <p>b.  Create a repository locally and wire it up to the one you created on github.</p>
 </blockquote>
 <p><strong>Anything you push to this repository will be live on the internet at yourusername.github.io</strong></p>
-<ol>
-<li>Add content and make the site live</li>
-</ol>
+<p>3.Add content and make the site live</p>
 <blockquote><p>a.  Copy over the html file you created from the notebook into the new repository.
 <strong>Your download might contain the html file with toc and supporting image files in a folder, depending on what your notebook contains. If that occurs, you need all of them in your repo to display your notebook with the toc and images.</strong></p>
 <p>b.  Name the html file index.html (whichever file is named index.html is the "landing page" for your site)</p>
@@ -13239,7 +13225,7 @@ There are so many cool things you can do to make text stand out in your notebook
 <p>OR</p>
 <p><code>____</code></p>
 <hr>
-<h3 id="Task-Boxes">Task Boxes<a class="anchor-link" href="#Task-Boxes">&#182;</a></h3><p>This works well in markdown files like your README files, but it will not render properly here because Gitpages doesn't work well with some markdown, especially when you mix markdown with html. Don't worry, it will look cool in your READMEs and other markdown files.</p>
+<h3 id="Task-Boxes">Task Boxes<a class="anchor-link" href="#Task-Boxes">&#182;</a></h3><p>This works well in markdown files like your README files, but it will not render properly here because Github Pages doesn't work well with some markdown, especially when you mix markdown with html. Don't worry, it will look cool in your READMEs and other markdown files.</p>
 
 <pre><code>markdown
 - [x] Some task
@@ -13384,7 +13370,7 @@ def cool_code(code):
 <li>Add the name you want displayed for the link in brackets, and the section tag proceded by a pound sign.</li>
 </ol>
 <p><code>For more details, see [Section 1](#section_1)</code></p>
-<p>Here is an example that will take you back to <a href="#styling">Styling Your Notebook</a>.</p>
+<p>Here is an example that will take you back to the <a href="#styling">Text Styling</a> section above.</p>
 <h3 id="Embed-an-External-Link-in-Your-Text">Embed an External Link in Your Text<a class="anchor-link" href="#Embed-an-External-Link-in-Your-Text">&#182;</a></h3>
 <pre><code>The *quick*, brown fox jumped **over** the lazy [dog](https://en.wikipedia.org/wiki/Dog).</code></pre>
 <p>The <em>quick</em>, brown fox jumped <strong>over</strong> the lazy <a href="https://en.wikipedia.org/wiki/Dog">dog</a>.</p>
