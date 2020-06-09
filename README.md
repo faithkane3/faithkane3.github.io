@@ -6,7 +6,7 @@
 
 [HTML Notebook Tutorial](https://faithkane3.github.io/notebook_html_tutorial)
 
->This notebook will show you how to install and use Nbextensions, use lot of exciting markdown code, and walk you through creating and using Github Pages to host your own notebooks as html.
+>This notebook will show you how to install and use Nbextensions, use lots of exciting markdown code, and walk you through creating and using Github Pages to host your own notebooks as html.
 
 [SQL Review Notebook](https://faithkane3.github.io/)
 
