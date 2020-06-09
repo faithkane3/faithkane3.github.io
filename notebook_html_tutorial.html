@@ -13118,11 +13118,13 @@ $( document ).ready(function(){
 <h2 id="Installing-Nbextensions-Configurator">Installing Nbextensions Configurator<a class="anchor-link" href="#Installing-Nbextensions-Configurator">&#182;</a></h2><ol>
 <li>Run the following from your command line:</li>
 </ol>
-<div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">jupyter_nbextensions_configurator</span>
-</pre></div>
-<div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">nbextensions_configurator</span> <span class="n">enable</span> <span class="o">--</span><span class="n">user</span>
-</pre></div>
-<ol>
+<p style="background:black">
+<code style="background:black;color:white">conda install -c conda-forge jupyter_nbextensions_configurator
+</code>
+</p><p style="background:black">
+<code style="background:black;color:white">jupyter nbextensions_configurator enable --user
+</code>
+</p><ol>
 <li>Once installed, you'll need to restart the notebook server. </li>
 </ol>
 <ol>
@@ -13196,17 +13198,13 @@ $( document ).ready(function(){
 There are so many cool things you can do to make text stand out in your notebook. I'm going to put some cool ones here, and I will link pages with even more cool styling code.
 </div><hr>
 <h3 id="Headings">Headings<a class="anchor-link" href="#Headings">&#182;</a></h3>
-<pre><code>markdown
-# for titles</code></pre>
+<pre><code># for titles</code></pre>
 
-<pre><code>markdown
-## for major headings</code></pre>
+<pre><code>## for major headings</code></pre>
 
-<pre><code>markdown
-### for subheadings</code></pre>
+<pre><code>### for subheadings</code></pre>
 
-<pre><code>markdown
-#### for 4th level subheadings</code></pre>
+<pre><code>#### for 4th level subheadings</code></pre>
 <h3 id="Bullets">Bullets<a class="anchor-link" href="#Bullets">&#182;</a></h3><p><code>- stuff you want to write</code></p>
 <ul>
 <li>a hyphen followed by a space makes a nice bullet</li>
@@ -13241,7 +13239,8 @@ There are so many cool things you can do to make text stand out in your notebook
 <p>OR</p>
 <p><code>____</code></p>
 <hr>
-<h3 id="Task-Boxes">Task Boxes<a class="anchor-link" href="#Task-Boxes">&#182;</a></h3>
+<h3 id="Task-Boxes">Task Boxes<a class="anchor-link" href="#Task-Boxes">&#182;</a></h3><p>This works well in markdown files like your README files, but it will not render properly here because Gitpages doesn't work well with some markdown, especially when you mix markdown with html. Don't worry, it will look cool in your READMEs and other markdown files.</p>
+
 <pre><code>markdown
 - [x] Some task
 - [ ] Some more tasks</code></pre>
@@ -13250,7 +13249,8 @@ There are so many cool things you can do to make text stand out in your notebook
 <li>[ ] Some more task</li>
 </ul>
 <h3 id="Colored-Font">Colored Font<a class="anchor-link" href="#Colored-Font">&#182;</a></h3><p>I LOVE colored fonts in notebooks! Be careful of using the really light colored ones; as you can see below, they're really hard to read!</p>
-<p><code>&lt;font color=green&gt;Write your so, so important stuff here!&lt;/font&gt;</code></p>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">font</span> <span class="na">color</span><span class="o">=</span><span class="s">green</span><span class="p">&gt;</span>Write your so, so important stuff here!<span class="p">&lt;/</span><span class="nt">font</span><span class="p">&gt;</span>
+</pre></div>
 <p><font color=green>Colored font really makes text pop in your notebook.</font></p>
 <p><font color=red>Colored font really makes text pop in your notebook.</font></p>
 <p><font color=orange>Colored font really makes text pop in your notebook.</font></p>
@@ -13289,16 +13289,14 @@ used for actions that might cause data loss or another major issue.
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Highlighting-Text">Highlighting Text<a class="anchor-link" href="#Highlighting-Text">&#182;</a></h3><p>Pop text with a bright background or use this great snippet to replicate the look of typing in the terminal.</p>
-
-<pre><code>markdown
-&lt;code style="background:yellow;color:black"&gt;Useful for highlighting to grab the attention of the reader towards certain points.&lt;/code&gt;</code></pre>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">code</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;background:yellow;color:black&quot;</span><span class="p">&gt;</span>Useful for highlighting to grab the attention of the reader towards certain points.<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>
+</pre></div>
 <p><code style="background:yellow;color:black">Grab the attention of the reader!</code></p>
-
-<pre><code>markdown
-&lt;p style="background:black"&gt;
-&lt;code style="background:black;color:white"&gt;C:\Users\YOUR_USERNAME&gt; pip3 install roughviz
-&lt;/code&gt;
-&lt;/p&gt;</code></pre>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;background:black&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">code</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;background:black;color:white&quot;</span><span class="p">&gt;</span>C:\Users\YOUR_USERNAME&gt; pip3 install roughviz
+<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
 <p style="background:black">
 <code style="background:black;color:white">C:\Users\YOUR_USERNAME> pip3 install roughviz
 </code>
@@ -13372,12 +13370,10 @@ def cool_code(code):
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Image-Styling">Image Styling<a class="anchor-link" href="#Image-Styling">&#182;</a></h2><h3 id="Drag-and-Drop-Images">Drag and Drop Images<a class="anchor-link" href="#Drag-and-Drop-Images">&#182;</a></h3><p>You can simply drag and drop or copy and paste an image into your Jupyter notebook. I have run into issues when I embed more than one image in a notebook by using drag and drop, so I prefer to imbed my images using the syntax you see below. Here you see the code and the rendered code below it displaying the image. The text in the brackets is optional, but it's nice to include a description.</p>
 
-<pre><code>markdown
-![innovation_mind_map](https://i.pinimg.com/originals/2c/65/e9/2c65e919057ff833bfeaa8c513b4ba52.gif)</code></pre>
+<pre><code>![innovation_mind_map](https://i.pinimg.com/originals/2c/65/e9/2c65e919057ff833bfeaa8c513b4ba52.gif)</code></pre>
 <p><img src="https://i.pinimg.com/originals/2c/65/e9/2c65e919057ff833bfeaa8c513b4ba52.gif" alt="innovation_mind_map"></p>
 
-<pre><code>markdown
-![](https://www.python.org/static/community_logos/python-logo-master-v3-TM.png)</code></pre>
+<pre><code>![](https://www.python.org/static/community_logos/python-logo-master-v3-TM.png)</code></pre>
 <p><img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" alt=""></p>
 <h3 id="Anchor-Links">Anchor Links<a class="anchor-link" href="#Anchor-Links">&#182;</a></h3><p>Embed an internal link to a section of your own notebook. This is great to quickly jump from one section of a large notebook to another.</p>
 <ol>
@@ -13387,13 +13383,10 @@ def cool_code(code):
 <ol>
 <li>Add the name you want displayed for the link in brackets, and the section tag proceded by a pound sign.</li>
 </ol>
-
-<pre><code>markdown
-For more details, see [Section 1](#section_1)</code></pre>
+<p><code>For more details, see [Section 1](#section_1)</code></p>
 <p>Here is an example that will take you back to <a href="#styling">Styling Your Notebook</a>.</p>
 <h3 id="Embed-an-External-Link-in-Your-Text">Embed an External Link in Your Text<a class="anchor-link" href="#Embed-an-External-Link-in-Your-Text">&#182;</a></h3>
-<pre><code>markdown
-The *quick*, brown fox jumped **over** the lazy [dog](https://en.wikipedia.org/wiki/Dog).</code></pre>
+<pre><code>The *quick*, brown fox jumped **over** the lazy [dog](https://en.wikipedia.org/wiki/Dog).</code></pre>
 <p>The <em>quick</em>, brown fox jumped <strong>over</strong> the lazy <a href="https://en.wikipedia.org/wiki/Dog">dog</a>.</p>
 
 </div>
@@ -13421,12 +13414,10 @@ The *quick*, brown fox jumped **over** the lazy [dog](https://en.wikipedia.org/w
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Image-Button-Links">Image Button Links<a class="anchor-link" href="#Image-Button-Links">&#182;</a></h3><p>If you use an image saved locally, it will not display in your html file. You need the image address.</p>
-
-<pre><code>markdown
-[![alt text](image address)](target_url)</code></pre>
-
-<pre><code>markdown
-[![button](copy_and_paste_giant_image_address_here)](https://ghost.org/changelog/markdown/)</code></pre>
+<div class="highlight"><pre><span></span>[![alt text](image address)](target_url)
+</pre></div>
+<div class="highlight"><pre><span></span>[![button](copy_and_paste_giant_image_address_here)](https://ghost.org/changelog/markdown/)
+</pre></div>
 <p><a href="https://ghost.org/changelog/markdown/"><img src="data:image/jpeg;base64,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" alt="button"></a></p>
 
 </div>
@@ -13436,8 +13427,7 @@ The *quick*, brown fox jumped **over** the lazy [dog](https://en.wikipedia.org/w
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 
-<pre><code>markdown
-[![button](copy_and_paste_giant_image_address_here)](https://codeup.com/ds-course-catalog/)</code></pre>
+<pre><code>[![button](copy_and_paste_giant_image_address_here)](https://codeup.com/ds-course-catalog/)</code></pre>
 <p><a href="https://codeup.com/ds-course-catalog/"><img src="data:image/jpeg;base64,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" alt="button"></a></p>
 
 </div>
@@ -13447,8 +13437,7 @@ The *quick*, brown fox jumped **over** the lazy [dog](https://en.wikipedia.org/w
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 
-<pre><code>markdown
-[![button](giant_image_address_here)](https://github.com/faithkane3)</code></pre>
+<pre><code>[![button](giant_image_address_here)](https://github.com/faithkane3)</code></pre>
 <p><a href="https://github.com/faithkane3"><img src="data:image/png;base64,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" alt="button"></a></p>
 
 </div>
