@@ -2,7 +2,7 @@
 
 # Welcome to Faith Kane's Reviews
 
-### This repo contains the notebooks that I am creating to share with others. I hope you find them useful. I've enjoyed the process of learning through notebook creation so much!
+### This site contains the notebooks that I am creating to share with others. I hope you find them useful. I've enjoyed the process of learning through notebook creation so much!
 
 [HTML Notebook Tutorial](https://faithkane3.github.io/notebook_html_tutorial)
 
