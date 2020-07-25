@@ -30,7 +30,7 @@ COMING SOON!
 
 >This notebook introduces the pandas library from Series objects to DataFrame objects including their common attributes, methods, and chaining techniques that employ both allowing for creative data manipulation.
 
-[Stats Review Notebook](https://faithkane3.github.io/stats_review)
+[Stats Review Notebook](https://faithkane3.github.io/stats_review/stats_review)
 
 >This notebook covers Probability Distributions and Hypothesis Testing. I tried to make the concepts approachable and included lots of helpful examples and code snippets.
 
