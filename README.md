@@ -8,7 +8,9 @@
 
 >This notebook will show you how to install and use Nbextensions, use lots of exciting markdown code, and walk you through creating and using Github Pages to host your own notebooks as html.
 
-[SQL Review Notebook](https://faithkane3.github.io/)
+[Github Page Tutorial](https://faithkane3.github.io/create_your_portfolio.pdf)
+
+>Want to make your own site as a personal portfolio? Check out this How-To infographic I created. This will get your site up and running in less than half an hour! When you're ready to make your markdown files beautiful, check out the tutorial below.
 
 SQL Review Notebooks
 
