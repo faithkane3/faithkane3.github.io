@@ -10,9 +10,17 @@
 
 [SQL Review Notebook](https://faithkane3.github.io/)
 
-COMING SOON!
+SQL Review Notebooks
 
->This notebook introduces SQL as a tool to interrogate databases and acquire data for use with python libraries like numpy and pandas. It will cover everything from basic queries using a single table to subqueries that involve joining tables and data filtering.
+>These notebook introduce SQL as a tool to interrogate databases and acquire data for use with python libraries like numpy and pandas. They will cover everything from RDBMS terms and structure to subqueries that involve joining and filtering data from multiple tables.
+
+- [SQL Intro Review Notebook](https://faithkane3.github.io/sql_intro)
+
+>This notebook starts out with an important overview of fundamentals and goes through using `GROUP BY` clauses.
+
+- [SQL Joins and Subqueries Review Notebook](https://faithkane3.github.io/sql_tables_and_joins)
+
+>This notebook starts out with an overview of table relationships and goes through explanation and examples of using the `JOIN` clause and subqueries.
 
 [Pandas Review Notebook](https://faithkane3.github.io/)
 
