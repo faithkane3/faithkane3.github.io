@@ -4,6 +4,10 @@
 
 ### This site contains the notebooks that I am creating to share with others. I hope you find them useful. I've enjoyed the process of learning through notebook creation so much!
 
+[Video Tutorial Resources](https://faithkane3.github.io/tutorial_videos)
+
+>This page houses the links to helpful video tutorials on a variety of topics.
+
 [HTML Notebook Tutorial](https://faithkane3.github.io/notebook_html_tutorial)
 
 >This notebook will show you how to install and use Nbextensions, use lots of exciting markdown code, and walk you through creating and using Github Pages to host your own notebooks as html.
