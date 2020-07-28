@@ -24,6 +24,10 @@ SQL Review Notebooks
 
 >This notebook starts out with an overview of table relationships and goes through explanation and examples of using the `JOIN` clause and subqueries.
 
+- [SQL Case and Temporary Tables Review Notebook](https://faithkane3.github.io/sql_extras)
+
+>This notebooks dives into the `CASE` statement and working with temporary tables.
+
 [Pandas Review Notebook](https://faithkane3.github.io/)
 
 COMING SOON!
