@@ -32,11 +32,15 @@ SQL Review Notebooks
 
 >This notebooks dives into the `CASE` statement and working with temporary tables.
 
-[Pandas Review Notebook](https://faithkane3.github.io/)
+Pandas Review Notebooks
 
-COMING SOON!
+>These notebooks introduce the pandas library from Series objects to DataFrame objects including their common attributes, methods, and chaining techniques that employ both allowing for creative data manipulation.
 
->This notebook introduces the pandas library from Series objects to DataFrame objects including their common attributes, methods, and chaining techniques that employ both allowing for creative data manipulation.
+[Pandas Series Review Notebook](https://faithkane3.github.io/pandas_series_review/pandas_series_review)
+
+[Pandas DataFrame Review Notebook](https://faithkane3.github.io/)
+
+Coming Soon!
 
 [Stats Review Notebook](https://faithkane3.github.io/stats_review/stats_review)
 
