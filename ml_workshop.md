@@ -3,7 +3,7 @@
 ## Welcome - Intro to ML Workshop
 
 This page contains all of the materials you need to begin your journey through the Intro to Machine Learning Workshop.
-___
+
 
 #### Agenda and Materials
 
