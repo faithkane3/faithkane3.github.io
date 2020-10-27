@@ -1,37 +1,7 @@
-![codeup_name](https://750092.smushcdn.com/1449913/wp-content/uploads/2018/08/logo.png?lossy=1&strip=1&webp=1)
+# Faith Kane
 
-## Welcome - Intro to ML Workshop
+### Welcome to My Github Page
 
-This site contains all of the materials you need to begin your journey through Codeup's Intro to Machine Learning Saturday Workshop.
+Learn the [Tools]()
 
-### Agenda
-
-
-#### Part I - Setup and Overview 10:00 - 10:40
-
-- Introductions
-    - [About Me](https://www.linkedin.com/in/faithkane/)
-    - [About You](https://app.sli.do/event/mnnqb5gc)
-    
-
-- [Overview](https://faithkane3.github.io/ds_overview.pdf) of Data Science and [Codeup DS Program](https://codeup.com/ds-admissions/)
-
-- Overview of the Day and Kaggle Notebook [Setup](https://www.kaggle.com/faithcodeup/classification-ml-workshop)
-    - [Kaggle Setup Help](https://towardsdatascience.com/kaggle-kernels-for-beginners-a-step-by-step-guide-3db6b1cd7606)
-
-
-Break - 10 minutes
-
-#### Part II - 10:50 - 12:00
-
-- 
-
-
-Lunch Break - 30 minutes
-
-#### Part II - 12:30 - 1:50
-
-- 
-
-
-##### Wrap Up 1:50
+Complete a [Project](https://faithkane3.github.io/) with Me
