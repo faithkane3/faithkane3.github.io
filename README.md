@@ -16,18 +16,19 @@ This site contains all of the materials you need to begin your journey through C
 
 - [Overview](https://faithkane3.github.io/ds_overview.pdf) of Data Science and [Codeup DS Program](https://codeup.com/ds-admissions/)
 
-- Overview of the Day and Setup
+- Overview of the Day and Kaggle Notebook [Setup](https://www.kaggle.com/faithcodeup/classification-ml-workshop)
+    - [Kaggle Setup Help](https://towardsdatascience.com/kaggle-kernels-for-beginners-a-step-by-step-guide-3db6b1cd7606)
 
 
 Break - 10 minutes
-___
+
 #### Part II - 10:50 - 12:00
 
 - 
 
 
 Lunch Break - 30 minutes
-___
+
 #### Part II - 12:30 - 1:50
 
 - 
