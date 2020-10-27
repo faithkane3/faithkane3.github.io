@@ -2,6 +2,8 @@
 
 ### Welcome to My Github Page
 
-Learn the [Tools]()
+Get to Know [Me](https://faithkane3.github.io/)
 
-Complete a [Project](https://faithkane3.github.io/) with Me
+Learn the [Tools](https://faithkane3.github.io/)
+
+Complete a [Project](https://faithkane3.github.io/ml_workshop) with Me
