@@ -1,12 +1,11 @@
 ![codeup_name](https://750092.smushcdn.com/1449913/wp-content/uploads/2018/08/logo.png?lossy=1&strip=1&webp=1)
 
-# Welcome to the Intro to Machine Learning Workshop
+## Welcome - Intro to ML Workshop
 
-This site contains all of the materials you need to begin your journey through Codeup's Intro to Machine Learning Saturday workshop.
+This site contains all of the materials you need to begin your journey through Codeup's Intro to Machine Learning Saturday Workshop.
 
-## Agenda
+### Agenda
 
-<hr style="border-top: 10px groove limegreen; margin-top: 1px; margin-bottom: 1px"></hr>
 
 #### Part I - Setup and Overview 10:00 - 10:40
 
