@@ -10,9 +10,7 @@ ___
 ##### Part I - Setup and Overview 10:00 - 10:40
 
 - Introductions
-    - [About Me](https://www.linkedin.com/in/faithkane/)
-    - [About You](https://app.sli.do/event/mnnqb5gc)
-- [Overview of Data Science](https://faithkane3.github.io/ds_overview.pdf) and [Codeup DS Program](https://codeup.com/ds-admissions/)
+- An [Overview of Data Science](https://faithkane3.github.io/ds_overview.pdf) and [Codeup DS Program](https://codeup.com/ds-admissions/)
 - Kaggle [Notebook](https://www.kaggle.com/faithcodeup/classification-ml-workshop) and Kaggle Initial Setup [Help](https://towardsdatascience.com/kaggle-kernels-for-beginners-a-step-by-step-guide-3db6b1cd7606)
 
 Break - 10 minutes
@@ -24,7 +22,7 @@ ___
 - Intro to Supervised Machine Learning and Classification
 - [Tools]((https://faithkane3.github.io/)) for Our Project
 - Acquiring and Preparing Data
-- Independent Practice
+- Supported Practice
 
 
 Lunch Break - 30 minutes
@@ -34,6 +32,7 @@ ___
 ##### Part II - 12:30 - 1:50
 
 - Exploratory Data Analysis
+- Supported Practice
 - Modeling
 
 

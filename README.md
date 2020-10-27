@@ -2,7 +2,7 @@
 
 ### Welcome to My Github Page
 
-Get to Know [Me](https://faithkane3.github.io/)
+Get to Know [Me](https://www.linkedin.com/in/faithkane/)
 
 Learn the [Tools](https://faithkane3.github.io/)
 
