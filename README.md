@@ -5,6 +5,6 @@
 
 Get to Know [Me](https://www.linkedin.com/in/faithkane/)
 
-Learn the [Tools](https://faithkane3.github.io/)
+Learn the [Tools](https://faithkane3.github.io/tools)
 
 Complete a [Project](https://faithkane3.github.io/ml_workshop) with Me
