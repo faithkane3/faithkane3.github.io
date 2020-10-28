@@ -11,7 +11,7 @@ This page contains all of the materials you need to begin your journey through t
 
 - Introductions
 - An [Overview of Data Science](https://faithkane3.github.io/ds_overview.pdf) and [Codeup DS Program](https://codeup.com/ds-admissions/)
-- Kaggle [Notebook](https://www.kaggle.com/faithcodeup/classification-ml-workshop) and Kaggle Initial Setup [Help](https://towardsdatascience.com/kaggle-kernels-for-beginners-a-step-by-step-guide-3db6b1cd7606)
+- Google Colab [Notebook]() and Google Colab Tutorial [Help](https://youtu.be/0aRE1x_xHIY)
 
 Break - 10 minutes
 
