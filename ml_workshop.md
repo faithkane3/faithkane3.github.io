@@ -14,7 +14,7 @@ This page contains all of the materials you need to begin your journey through t
 - Google Colab [Notebook](https://colab.research.google.com/drive/1MoxkpATZRFLS3inZ38Wv0AxrBpQW5A8x?usp=sharing) Setup
     - Google Colab Quick Start [Here](https://youtu.be/0aRE1x_xHIY) and 
     - Longer Tutorial [Here](https://youtu.be/inN8seMm7UI)
-  
+- [Tools]((https://faithkane3.github.io/)) for Our Project
 
 Break - 10 minutes
 
@@ -39,3 +39,7 @@ ___
 
 
 ##### Let's Wrap It Up!
+
+##### Do another project on your own! 
+- Use this Google [Colab ML Playground Notebook](https://colab.research.google.com/drive/1EX6EjkVw7BEo85hQIwbv7TPqsr-SuGG5?usp=sharing) to do another project with the Iris dataset, which I have preloaded for you. 
+- Go through the pipeline with different data using all of the tools and supporting notebooks available to you through this site.
