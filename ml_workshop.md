@@ -11,7 +11,7 @@ This page contains all of the materials you need to begin your journey through t
 
 - Introductions
 - An [Overview of Data Science](https://faithkane3.github.io/ds_overview.pdf) and [Codeup DS Program](https://codeup.com/ds-admissions/)
-- Google Colab [Notebook]() and Google Colab Quick Start [Here](https://youtu.be/0aRE1x_xHIY) and Longer Tutorial [Here](https://youtu.be/inN8seMm7UI).
+- Google Colab [Notebook](https://colab.research.google.com/drive/1MoxkpATZRFLS3inZ38Wv0AxrBpQW5A8x?usp=sharing) and Google Colab Quick Start [Here](https://youtu.be/0aRE1x_xHIY) and Longer Tutorial [Here](https://youtu.be/inN8seMm7UI).
 
 Break - 10 minutes
 
