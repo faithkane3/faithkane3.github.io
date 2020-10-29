@@ -6,4 +6,4 @@ Pandas Series Review [Notebook](https://faithkane3.github.io/pandas_series_revie
 
 Pandas DataFrames Review [Notebook](https://faithkane3.github.io/pandas_dataframes_review)
 
-Classification Project Review [Notebook](https://faithkane3.github.io/wrkshp_classification_review/wrkshp_classification_review)
+Classification Project Review [Notebook](https://faithkane3.github.io/workshop_classification_review/workshop_classification_review)
