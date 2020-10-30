@@ -16,7 +16,7 @@ This page contains all of the materials you need to begin your journey through t
     - [ML Notebook](https://colab.research.google.com/drive/1MoxkpATZRFLS3inZ38Wv0AxrBpQW5A8x?usp=sharing)
     - Google Colab Quick Start [Here](https://youtu.be/0aRE1x_xHIY) and 
     - Longer Tutorial [Here](https://youtu.be/inN8seMm7UI)
-- [Tools]((https://faithkane3.github.io/)) for Our Project
+- [Tools](https://faithkane3.github.io/tools) for Our Project
 
 Break - 10 minutes
 
