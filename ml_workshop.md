@@ -12,7 +12,7 @@ This page contains all of the materials you need to begin your journey through t
 - Introductions - Who am I? Who are you?
 - An [Overview of Data Science](https://faithkane3.github.io/ds_overview.pdf) and [Codeup DS Program](https://codeup.com/ds-admissions/)
 - Google Colab Setup
-    - [Pandas Crash Course Notebook]()
+    - [Pandas Crash Course Notebook](https://colab.research.google.com/drive/1Io39BlBOYHn1y22_zRfniXhdXE9s-huU?usp=sharing)
     - [ML Notebook](https://colab.research.google.com/drive/1MoxkpATZRFLS3inZ38Wv0AxrBpQW5A8x?usp=sharing)
     - Google Colab Quick Start [Here](https://youtu.be/0aRE1x_xHIY) and 
     - Longer Tutorial [Here](https://youtu.be/inN8seMm7UI)
